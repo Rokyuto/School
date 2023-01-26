@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="93f378bd-d6e8-4a69-b112-ed29e58ce610" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ASCII/num_symbol_bin_hex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ASCII/num_symbol_bin_hex_Recurse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BitwiseOperators/OperatorsExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StringToNum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../3 kurs/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../3 kurs/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../3 kurs/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../3 kurs/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/OOP_Exersices.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/OOP_Exersices.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/AbstractionExercise/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/AbstractionExercise/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/BMICalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/BMICalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/Laptop.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/Laptop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/Market.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/Market.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/Revision.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/Revision.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/testExamExersices/BonusPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/testExamExersices/BonusPoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/testExamExersices/CheckProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/testExamExersices/CheckProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/testExamExersices/CompareSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/testExamExersices/CompareSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/testExamExersices/ElementsSumCompare.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/testExamExersices/ElementsSumCompare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/testExamExersices/NumsToN.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/testExamExersices/NumsToN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/testExamExersices/RepeatedNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/testExamExersices/RepeatedNum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/testExamExersices/SwapVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/testExamExersices/SwapVariables.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/testExamExersices/SymmetricCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/testExamExersices/SymmetricCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/testExamExersices/compareArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/testExamExersices/compareArrays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/testExamExersices/matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/testExamExersices/matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/testExamExersices/printNumToN.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/testExamExersices/printNumToN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/zad1/zad1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/zad1/zad1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/zad1/zad10.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/zad1/zad10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/zad1/zad11.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/zad1/zad11.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/zad1/zad12.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/zad1/zad12.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/zad1/zad2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/zad1/zad2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/zad1/zad3.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/zad1/zad3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/zad1/zad4.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/zad1/zad4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/zad1/zad5.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/zad1/zad5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/zad1/zad6.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/zad1/zad6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/zad1/zad7.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/zad1/zad7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/zad1/zad8.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/zad1/zad8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_exersices/src/zad1/zad9.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_exersices/zad1/zad9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_lectures/OOP_Lectures.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_lectures/OOP_Lectures.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_lectures/src/ClassesObjects/ClassObjectsLessonExercises.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_lectures/ClassesObjects/ClassObjectsLessonExercises.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_lectures/src/ClassesObjects/ClassesObjectsLesson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_lectures/ClassesObjects/ClassesObjectsLesson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_lectures/src/CoffeeMachineApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/CoffeeMachineApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_lectures/src/MethodsLesson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_lectures/MethodsLesson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_lectures/src/OOP_Abstraction/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_lectures/OOP_Abstraction/Interface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_lectures/src/OOP_Abstraction/OOP_Bases.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_lectures/OOP_Abstraction/OOP_Bases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_lectures/src/OOP_Exercise/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_lectures/OOP_Exercise/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/OOP_lectures/src/OOP_Principles.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/OOP_lectures/OOP_Principles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/SoftUni/src/TEST.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/SoftUni/src/TEST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA/SoftUni/src/WaterTank.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA/src/SoftUni/src/WaterTank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MOP/ASCII/ASCII.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MOP/ASCII/src/num_symbol_bin_hex.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MOP/ASCII/src/num_symbol_bin_hex_Recurse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MOP/BitwiseOperators/BitwiseOperators.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MOP/BitwiseOperators/src/OperatorsExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MOP/StringToNum.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KsF4X0PvzH7v6L3DHSjwJD3ns9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="93f378bd-d6e8-4a69-b112-ed29e58ce610" name="Changes" comment="" />
+      <created>1674755193885</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1674755193885</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
