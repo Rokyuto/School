@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="datePickerScript.js"></script>
+    <title>Rokzile Travel</title>
+</head>
+<body>
+    <form action="action.php" method="POST">
+        <span class="Container_flightAirlineChoice">
+            <select class="Menu_flightAirline" name="Menu_flightAirline" id="Menu_flightAirline">
+                <option hidden disabled selected="Choose your airline">Choose your airline</option>
+                <option value="QatarAirways">Qatar Airways</option>
+                <option value="Emirates">Emirates</option>
+                <option value="BritishAirways">British Airways</option>
+            </select>
+        </span>
+        <date-picker format="DD MMMM YYYY"></date-picker>
+        <input type="date" class="Picker_FlightDate" name="flightDate" id="flightDate" value="">
+    </form>
+</body>
+</html>
