@@ -413,7 +413,6 @@ class DatePicker extends HTMLElement {
     return `
       :host {
         position: relative;
-        font-family: sans-serif;
       }
       
       .date-toggle {
@@ -425,9 +424,12 @@ class DatePicker extends HTMLElement {
         background: #eee;
         color: #333;
         border-radius: 6px;
-        font-weight: bold;
         cursor: pointer;
         text-transform: capitalize;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
       }
       
       .calendar-dropdown {
@@ -442,6 +444,7 @@ class DatePicker extends HTMLElement {
         background: #fff;
         border-radius: 5px;
         box-shadow: 0 0 8px rgba(0,0,0,0.2);
+        cursor: pointer;
       }
       
       .calendar-dropdown.top {
@@ -519,7 +522,7 @@ class DatePicker extends HTMLElement {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 10px;
+        font-size: 15px;
         text-transform: capitalize;
       }
       
@@ -531,18 +534,20 @@ class DatePicker extends HTMLElement {
       
       .month-day {
         padding: 8px 5px;
-        background: #c7c9d3;
-        color: #fff;
+        background: #fff;
+        color: rgba(80, 80, 100, 0.5);
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 2px;
+        border-width: 1px;
         cursor: pointer;
-        border: none;
+        //border: none;
       }
       
       .month-day.current {
-        background: #444857;
+        background: #fff;
+        color: black;
       }
       
       .month-day.selected {

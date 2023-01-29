@@ -1,14 +1,53 @@
 body{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    height: 100vh;
     background-color: bisque;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.Menu_flightAirline{
+.Menu_FlightAirline{
     position: relative;
     padding: 0.5em 2em 0.5em 0.5em;
-    font-size: 20px;
+    font-size: 18px;
     background-color: rgba(80, 80, 100, 0.9);
     color: white;
     border: 0;
     appearance: none;
     outline: none;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.Menu_FromAirport{
+    width: 350px;
+    cursor: pointer;
+}
+
+#FromAirportSelectField{
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.7);
+    /*border-radius: 6px;*/
+}
+
+#FromAirportOptionsList{
+    width: 100%;
+    background-color: rgba(255,255,255,0.7);
+    overflow: hidden;
+}
+
+.AirportOption{
+    width: 100%;
+    padding: 10px;
+    list-style: none;
+    box-sizing:border-box;
+    position: relative;
+}
+
+.AirportOption:hover{
+    background-color: rgba(255,255,255);
 }

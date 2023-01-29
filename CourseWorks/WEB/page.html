@@ -10,16 +10,38 @@
 </head>
 <body>
     <form action="action.php" method="POST">
-        <span class="Container_flightAirlineChoice">
-            <select class="Menu_flightAirline" name="Menu_flightAirline" id="Menu_flightAirline">
-                <option hidden disabled selected="Choose your airline">Choose your airline</option>
-                <option value="QatarAirways">Qatar Airways</option>
-                <option value="Emirates">Emirates</option>
-                <option value="BritishAirways">British Airways</option>
-            </select>
-        </span>
+
+        <select class="Menu_FlightAirline" name="FlightAirline" id="FlightAirline">
+            <option hidden disabled selected="Choose your airline">Choose your airline</option>
+            <option value="QatarAirways">Qatar Airways</option>
+            <option value="Emirates">Emirates</option>
+            <option value="BritishAirways">British Airways</option>
+        </select>
+
         <date-picker format="DD MMMM YYYY"></date-picker>
-        <input type="date" class="Picker_FlightDate" name="flightDate" id="flightDate" value="">
+
+        <div class="Menu_FromAirport">
+            <div>
+                <p id="FromAirportSelectField">From</p>
+            </div>
+            <ul id="FromAirportOptionsList">
+                <li class="AirportOption">Sofia</li>
+                <li class="AirportOption">Munich</li>
+                <li class="AirportOption">Paris</li>
+                <li class="AirportOption">Barcelona</li>
+                <li class="AirportOption">Berlin</li>
+                <li class="AirportOption">London</li>
+                <li class="AirportOption">Budapest</li>
+                <li class="AirportOption">Bucharest</li>
+                <li class="AirportOption">Bourgas</li>
+                <li class="AirportOption">Madrid</li>
+                <li class="AirportOption">Lisbon</li>
+                <li class="AirportOption">Vienna</li>
+                <li class="AirportOption">Geneva</li>
+                <li class="AirportOption">Milan</li>
+            </ul>
+        </div>
+
     </form>
 </body>
 </html>
