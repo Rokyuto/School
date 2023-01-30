@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="datePickerScript.js"></script>
+    
+    
     <title>Rokzile Travel</title>
 </head>
 <body>
@@ -21,10 +22,10 @@
         <date-picker format="DD MMMM YYYY"></date-picker>
 
         <div class="Menu_FromAirport">
-            <div>
-                <p id="FromAirportSelectField">From</p>
+            <div id="FromAirportSelectField">
+                <p id="FromAirportSelectFieldText">From</p>
             </div>
-            <ul id="FromAirportOptionsList">
+            <ul id="FromAirportOptionsList" class="FromAirportOptionsList">
                 <li class="AirportOption">
                     <img src="Images/airplane.png" alt="Airpline Image Image">
                     <p>Sofia</p>
@@ -83,7 +84,8 @@
                 </li>
             </ul>
         </div>
-
+        <script src="Scripts/Script_DatePicker.js"></script>
+        <script src="Scripts/Script_AirportMenu.js"></script>
     </form>
 </body>
 </html>

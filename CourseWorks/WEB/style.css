@@ -25,10 +25,9 @@ body{
     cursor: pointer;
 }
 
-#FromAirportSelectField{
+#FromAirportSelectFieldText{
     width: 100%;
     padding: 15px 20px;
-    margin-bottom: 30px;
     box-sizing: border-box;
     background: rgba(255,255,255,0.7);
     /*border-radius: 6px;*/
@@ -36,9 +35,15 @@ body{
 
 #FromAirportOptionsList{
     width: 100%;
+    max-height: 240px;
     padding: 0;
     background-color: rgba(255,255,255,0.7);
-    overflow: hidden;
+    overflow-y: scroll;
+}
+
+/* By default Airport Menu will be hidden */
+.FromAirportOptionsList{
+    visibility: hidden;
 }
 
 .AirportOption{
