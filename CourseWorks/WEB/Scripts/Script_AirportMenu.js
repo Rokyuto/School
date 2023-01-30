@@ -7,6 +7,7 @@ var OptionList_FromAirports = document.getElementById("OptionsList_FromAirport")
 // FromAirport Select Field On Click Event
 SelectField_FromAirport.onclick = function() {
     OptionList_FromAirports.classList.toggle("OptionsList_FromAirport"); // Toggle (hide) FromAirport Options List Visibility
+    fill_OptionsList_AirportMenu();
 }
 
 // ForEach Airport Loop in List with From Aiprort
@@ -37,3 +38,13 @@ for(toAirport of List_ToAirports){
         OptionList_ToAirports.classList.toggle("OptionsList_ToAirport"); // Toggle (hide) ToAirport Options List Visibility
     }
 }
+
+function fill_OptionsList_AirportMenu(){
+    const reader = new FileReader();
+    reader.addEventListener('read', (event) => {
+        img.src = event.target.result;
+    });
+    reader.readAsDataURL(file);
+}
+
+
