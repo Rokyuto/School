@@ -1,3 +1,4 @@
+/* Page Base Style */
 body{
     display: flex;
     flex-direction: column;
@@ -7,6 +8,7 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* Style for: Menu with Flight Airline Choice */
 .Menu_FlightAirline{
     position: relative;
     padding: 0.5em 2em 0.5em 0.5em;
@@ -20,33 +22,66 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.Menu_FromAirport{
+/* Style for: Container with the two Airports Choice / Maybe for the all form ???? */
+.Container_AirportsChoice{
+    display: flex;
+    margin-top: 16px;
+}
+
+/* Style for: From and To Airport Menus */
+.Menu_FromAirport, .Menu_ToAirport{
     width: 350px;
     cursor: pointer;
 }
 
-#FromAirportSelectFieldText{
+/* Style for: FromAirport Menu */
+.Menu_FromAirport{
+    margin: 0 0 0 10px;
+}
+
+/* Style for: ToAirport Menu */
+.Menu_ToAirport{
+    margin: 0 10px 0 0;
+}
+    
+/* Style for: From and To Airport Select Fields */
+#SelectField_FromAirport, #SelectField_ToAirport{
+    /*margin-top: 16px;*/
+    border: 1px solid black;
+}
+
+/* Style for: From Airport Select Field Right Border */
+#SelectField_FromAirport{
+    border-right: 0; /* Without Border */
+}
+
+/* Style for: FromAirport Select Field's Text */
+#SelectField_FromAirport_Text, #SelectField_ToAirport_Text{
     width: 100%;
     padding: 15px 20px;
+    margin: 0;
     box-sizing: border-box;
     background: rgba(255,255,255,0.7);
     /*border-radius: 6px;*/
 }
 
-#FromAirportOptionsList{
+/* Style for: From and To Airport Options Lists (Menu with From and To Airports) */
+#OptionsList_FromAirport , #OptionsList_ToAirport{
     width: 100%;
     max-height: 240px;
+    margin-top: 0;
     padding: 0;
     background-color: rgba(255,255,255,0.7);
     overflow-y: scroll;
 }
 
 /* By default Airport Menu will be hidden */
-.FromAirportOptionsList{
+.OptionsList_FromAirport, .OptionsList_ToAirport{
     visibility: hidden;
 }
 
-.AirportOption{
+/* Style for: FromAirport Option */
+.Option_FromAirport, .Option_ToAirport{
     width: 100%;
     font-size: 1.1em;
     padding: 1px 0 1px 70px;
@@ -55,13 +90,15 @@ body{
     position: relative;
 }
 
-.AirportOption img{
+/* Style for: FromAirport Options' Image */
+.Option_FromAirport img, .Option_ToAirport img{
     width:25px;
     position: absolute;
     top: 12px;
-    left: 25px;
+    left: 25px; 
 }
 
-.AirportOption:hover{
+/* Style for: On Hover FromAirport Option */
+.Option_FromAirport:hover, .Option_ToAirport:hover{
     background-color: rgba(255,255,255);
 }

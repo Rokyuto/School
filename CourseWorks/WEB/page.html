@@ -1,91 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    
-    
-    <title>Rokzile Travel</title>
-</head>
-<body>
-    <form action="action.php" method="POST">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Rokzile Travel</title>
+    </head>
+    <body>
+        <form action="action.php" method="POST">
+            <!-- Menu Element for Flight Airline Choice -->
+            <select class="Menu_FlightAirline" name="FlightAirline" id="FlightAirline">
+                <option hidden disabled selected="Choose your airline">Choose your airline</option>
+                <option value="QatarAirways">Qatar Airways</option>
+                <option value="Emirates">Emirates</option>
+                <option value="BritishAirways">British Airways</option>
+            </select>
 
-        <select class="Menu_FlightAirline" name="FlightAirline" id="FlightAirline">
-            <option hidden disabled selected="Choose your airline">Choose your airline</option>
-            <option value="QatarAirways">Qatar Airways</option>
-            <option value="Emirates">Emirates</option>
-            <option value="BritishAirways">British Airways</option>
-        </select>
+            <!-- Pick Element for Flight Date Choice -->
+            <date-picker format="DD MMMM YYYY"></date-picker>
 
-        <date-picker format="DD MMMM YYYY"></date-picker>
-
-        <div class="Menu_FromAirport">
-            <div id="FromAirportSelectField">
-                <p id="FromAirportSelectFieldText">From</p>
+            <!-- Menu Element for Flight From and To Airport Choice (FOR NOW ????) -->
+            <div class="Container_AirportsChoice">
+                <!-- Menu Element for Flight From Airport Choice -->
+                <div class="Menu_FromAirport">
+                    <div id="SelectField_FromAirport">
+                        <p id="SelectField_FromAirport_Text">From</p>
+                    </div>
+                    <ul id="OptionsList_FromAirport" class="OptionsList_FromAirport">
+                        <li class="Option_FromAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Sofia</p>
+                        </li>
+                        <li class="Option_FromAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Munich</p>
+                        </li>
+                        <li class="Option_FromAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Paris</p>
+                        </li>
+                        <li class="Option_FromAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Barcelona</p>
+                        </li>
+                        <li class="Option_FromAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Berlin</p>
+                        </li>
+                        <li class="Option_FromAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>London</p>
+                        </li>
+                        <li class="Option_FromAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Budapest</p>
+                        </li>
+                        <li class="Option_FromAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Bucharest</p>
+                        </li>
+                        <li class="Option_FromAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Bourgas</p>
+                        </li>
+                        <li class="Option_FromAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Madrid</p>
+                        </li>
+                        <li class="Option_FromAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Lisbon</p>
+                        </li>
+                        <li class="Option_FromAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Vienna</p>
+                        </li>
+                        <li class="Option_FromAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Geneva</p> 
+                        </li>
+                        <li class="Option_FromAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Milan</p> 
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Menu Element for Flight To Airport Choice -->
+                <div class="Menu_ToAirport">
+                    <div id="SelectField_ToAirport">
+                        <p id="SelectField_ToAirport_Text">To</p>
+                    </div>
+                    <ul id="OptionsList_ToAirport" class="OptionsList_ToAirport">
+                        <li class="Option_ToAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Sofia</p>
+                        </li>
+                        <li class="Option_ToAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Munich</p>
+                        </li>
+                        <li class="Option_ToAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Paris</p>
+                        </li>
+                        <li class="Option_ToAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Barcelona</p>
+                        </li>
+                        <li class="Option_ToAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Berlin</p>
+                        </li>
+                        <li class="Option_ToAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>London</p>
+                        </li>
+                        <li class="Option_ToAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Budapest</p>
+                        </li>
+                        <li class="Option_ToAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Bucharest</p>
+                        </li>
+                        <li class="Option_ToAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Bourgas</p>
+                        </li>
+                        <li class="Option_ToAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Madrid</p>
+                        </li>
+                        <li class="Option_ToAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Lisbon</p>
+                        </li>
+                        <li class="Option_ToAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Vienna</p>
+                        </li>
+                        <li class="Option_ToAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Geneva</p> 
+                        </li>
+                        <li class="Option_ToAirport">
+                            <img src="Images/airplane.png" alt="Airpline Image Image">
+                            <p>Milan</p> 
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <ul id="FromAirportOptionsList" class="FromAirportOptionsList">
-                <li class="AirportOption">
-                    <img src="Images/airplane.png" alt="Airpline Image Image">
-                    <p>Sofia</p>
-                </li>
-                <li class="AirportOption">
-                    <img src="Images/airplane.png" alt="Airpline Image Image">
-                    <p>Munich</p>
-                </li>
-                <li class="AirportOption">
-                    <img src="Images/airplane.png" alt="Airpline Image Image">
-                    <p>Paris</p>
-                </li>
-                <li class="AirportOption">
-                    <img src="Images/airplane.png" alt="Airpline Image Image">
-                    <p>Barcelona</p>
-                </li>
-                <li class="AirportOption">
-                    <img src="Images/airplane.png" alt="Airpline Image Image">
-                    <p>Berlin</p>
-                </li>
-                <li class="AirportOption">
-                    <img src="Images/airplane.png" alt="Airpline Image Image">
-                    <p>London</p>
-                </li>
-                <li class="AirportOption">
-                    <img src="Images/airplane.png" alt="Airpline Image Image">
-                    <p>Budapest</p>
-                </li>
-                <li class="AirportOption">
-                    <img src="Images/airplane.png" alt="Airpline Image Image">
-                    <p>Bucharest</p>
-                </li>
-                <li class="AirportOption">
-                    <img src="Images/airplane.png" alt="Airpline Image Image">
-                    <p>Bourgas</p>
-                </li>
-                <li class="AirportOption">
-                    <img src="Images/airplane.png" alt="Airpline Image Image">
-                    <p>Madrid</p>
-                </li>
-                <li class="AirportOption">
-                    <img src="Images/airplane.png" alt="Airpline Image Image">
-                    <p>Lisbon</p>
-                </li>
-                <li class="AirportOption">
-                    <img src="Images/airplane.png" alt="Airpline Image Image">
-                    <p>Vienna</p>
-                </li>
-                <li class="AirportOption">
-                    <img src="Images/airplane.png" alt="Airpline Image Image">
-                    <p>Geneva</p> 
-                </li>
-                <li class="AirportOption">
-                    <img src="Images/airplane.png" alt="Airpline Image Image">
-                    <p>Milan</p> 
-                </li>
-            </ul>
-        </div>
-        <script src="Scripts/Script_DatePicker.js"></script>
-        <script src="Scripts/Script_AirportMenu.js"></script>
-    </form>
-</body>
+
+            <!-- Page and Elements' Scripts -->
+            <script src="Scripts/Script_DatePicker.js"></script>
+            <script src="Scripts/Script_AirportMenu.js"></script>
+        </form>
+    </body>
 </html>
