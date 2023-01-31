@@ -39,6 +39,7 @@ for(toAirport of List_ToAirports){
     }
 }
 
+// Switch Airports Button's Function
 function switchAirports(){
     if(SelectField_FromAirport_Text.innerHTML != "From" && SelectField_ToAirport_Text.innerHTML == "To"){
         SelectField_ToAirport_Text.innerHTML = SelectField_FromAirport_Text.innerHTML;
@@ -55,7 +56,6 @@ function switchAirports(){
         SelectField_ToAirport_Text.innerHTML = temp;
     }
 }
-
 
 // Funtion to remove from ToAirportMenu the chosen/selected Airport Option from FromAirportMenu
 function removeChosenAirport(airportName){ // Airport's Name = Airport's ID
