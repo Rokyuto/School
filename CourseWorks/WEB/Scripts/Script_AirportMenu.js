@@ -7,7 +7,6 @@ var OptionList_FromAirports = document.getElementById("OptionsList_FromAirport")
 // FromAirport Select Field On Click Event
 SelectField_FromAirport.onclick = function() {
     OptionList_FromAirports.classList.toggle("OptionsList_FromAirport"); // Toggle (hide) FromAirport Options List Visibility
-    fill_OptionsList_AirportMenu();
 }
 
 // ForEach Airport Loop in List with From Aiprort
@@ -36,15 +35,23 @@ for(toAirport of List_ToAirports){
     toAirport.onclick = function(){ // On Click Event
         SelectField_ToAirport_Text.innerHTML = this.textContent; // Change ToAirportSelectField's Text in HTML page to clicked To Airport Option Element's Text
         OptionList_ToAirports.classList.toggle("OptionsList_ToAirport"); // Toggle (hide) ToAirport Options List Visibility
+        return true;
     }
 }
 
-function fill_OptionsList_AirportMenu(){
-    const reader = new FileReader();
-    reader.addEventListener('read', (event) => {
-        img.src = event.target.result;
-    });
-    reader.readAsDataURL(file);
+function switchAirports(){
+    if(SelectField_FromAirport_Text.innerHTML != "From" && SelectField_ToAirport_Text.innerHTML == "To"){
+        SelectField_ToAirport_Text.innerHTML = SelectField_FromAirport_Text.innerHTML;
+        SelectField_FromAirport_Text.innerHTML = "From";
+        
+    }
+    else if(SelectField_ToAirport_Text.innerHTML != "To" && SelectField_FromAirport_Text.innerHTML == "From"){
+        SelectField_FromAirport_Text.innerHTML = SelectField_ToAirport_Text.innerHTML;
+        SelectField_ToAirport_Text.innerHTML = "To";
+    }
+    else if(SelectField_FromAirport_Text.innerHTML != "From" && SelectField_ToAirport_Text.innerHTML != "To"){
+        var temp = SelectField_FromAirport_Text.innerHTML;
+        SelectField_FromAirport_Text.innerHTML = SelectField_ToAirport_Text.innerHTML;
+        SelectField_ToAirport_Text.innerHTML = temp;
+    }
 }
-
-
