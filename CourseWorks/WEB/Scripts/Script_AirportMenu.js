@@ -13,6 +13,7 @@ SelectField_FromAirport.onclick = function() {
 for(FromAirport of List_FromAirports){
     FromAirport.onclick = function(){ // On Click Event
         SelectField_FromAirport_Text.innerHTML = this.textContent; // Change FromAirportSelectField's Text in HTML page to clicked From Airport Option Element's Text
+        removeChosenAirport(this.id);
         OptionList_FromAirports.classList.toggle("OptionsList_FromAirport"); // Toggle (hide) FromAirport Options List Visibility
     }
 }
@@ -35,7 +36,6 @@ for(toAirport of List_ToAirports){
     toAirport.onclick = function(){ // On Click Event
         SelectField_ToAirport_Text.innerHTML = this.textContent; // Change ToAirportSelectField's Text in HTML page to clicked To Airport Option Element's Text
         OptionList_ToAirports.classList.toggle("OptionsList_ToAirport"); // Toggle (hide) ToAirport Options List Visibility
-        return true;
     }
 }
 
@@ -54,4 +54,11 @@ function switchAirports(){
         SelectField_FromAirport_Text.innerHTML = SelectField_ToAirport_Text.innerHTML;
         SelectField_ToAirport_Text.innerHTML = temp;
     }
+}
+
+
+// Funtion to remove from ToAirportMenu the chosen/selected Airport Option from FromAirportMenu
+function removeChosenAirport(airportName){ // Airport's Name = Airport's ID
+    var airports = document.getElementsByName(airportName);
+    airports[1].parentNode.removeChild(airports[1]);
 }
