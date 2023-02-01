@@ -1,10 +1,4 @@
-function getWeekNumber(date) {
-  const firstDayOfTheYear = new Date(date.getFullYear(), 0, 1);
-	const pastDaysOfYear = (date.getTime() - firstDayOfTheYear.getTime()) / 86400000;
-	
-	return Math.ceil((pastDaysOfYear + firstDayOfTheYear.getDay() + 1) / 7)
-}
-
+// Function to check if February has 29 days
 function isLeapYear(year) {
   return year % 100 === 0 ? year % 400 === 0 : year % 4 === 0;
 }
@@ -24,7 +18,6 @@ class Day {
     this.monthShort = date.toLocaleString(lang, { month: 'short'});
     this.monthNumber = date.getMonth() + 1;
     this.timestamp = date.getTime();
-    this.week = getWeekNumber(date);
   }
   
   get isToday() {
@@ -43,8 +36,6 @@ class Day {
     return formatStr
       .replace(/\bYYYY\b/, this.year)
       .replace(/\bYYY\b/, this.yearShort)
-      .replace(/\bWW\b/, this.week.toString().padStart(2, '0'))
-      .replace(/\bW\b/, this.week)
       .replace(/\bDDDD\b/, this.day)
       .replace(/\bDDD\b/, this.dayShort)
       .replace(/\bDD\b/, this.date.toString().padStart(2, '0'))

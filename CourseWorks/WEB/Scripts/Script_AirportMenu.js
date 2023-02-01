@@ -57,8 +57,38 @@ function switchAirports(){
     }
 }
 
+var removedAirport = null;
+
 // Funtion to remove from ToAirportMenu the chosen/selected Airport Option from FromAirportMenu
-function removeChosenAirport(airportName){ // Airport's Name = Airport's ID
-    var airports = document.getElementsByName(airportName);
-    airports[1].parentNode.removeChild(airports[1]);
+function removeChosenAirport(airportName){ // Airport's City Name = Airport's ID
+    returnOldChosenAirport();
+    var airports = document.getElementsByName(airportName); // Find all Airport Options with the given AirportID, which is also the Airport's City Name
+    removedAirport = airports[1]; // Update Removed Airport Option Variable
+    airports[1].parentNode.removeChild(airports[1]); // Remove the Airport Option from ToAirportMenu, equal to the chosen Airport Option from FromAirportMenu
+}
+
+// Function to return old Airport Choice (the Airport choice before the new Airport Choice)
+function returnOldChosenAirport(){ // Airport's City Name = Airport's ID
+    if(removedAirport){ // Check If there has already been chosen Airport before (client choose Airport for 2 or more times)
+        createAirportOption(); // Call function to return the old Airport Choice/Option
+    }
+}   
+
+// Function to create ToAirport Menu Option
+function createAirportOption(){
+    var airportOption = document.createElement("li");
+    airportOption.className="Option_ToAirport";
+    airportOption.setAttribute("name",removedAirport.id)
+    airportOption.id=removedAirport.id;
+    var airportCity = document.createElement("p");
+    airportCity.textContent = removedAirport.id;
+
+    var aircraftImg = document.createElement("img");
+    aircraftImg.src="Images/airplane.png";
+    aircraftImg.alt="Airpline Image Image";
+    airportOption.appendChild(aircraftImg);
+
+    airportOption.appendChild(airportCity); // document.createTextNode('The man who mistook his wife for a hat')
+
+    document.getElementById('OptionsList_ToAirport').appendChild(airportOption);
 }
