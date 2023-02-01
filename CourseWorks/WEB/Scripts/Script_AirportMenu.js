@@ -12,8 +12,9 @@ SelectField_FromAirport.onclick = function() {
 // ForEach Airport Loop in List with From Aiprort
 for(FromAirport of List_FromAirports){
     FromAirport.onclick = function(){ // On Click Event
+        clearToAirportFieldOnSameAirportChoice(this.textContent);
         SelectField_FromAirport_Text.innerHTML = this.textContent; // Change FromAirportSelectField's Text in HTML page to clicked From Airport Option Element's Text
-        removeChosenAirport(this.id);
+        removeChosenAirport(this.id); // Call Function to remove from ToAirport Menu, the chosen (clicked) Airport from FromAirport Menu
         OptionList_FromAirports.classList.toggle("OptionsList_FromAirport"); // Toggle (hide) FromAirport Options List Visibility
     }
 }
@@ -57,12 +58,21 @@ function switchAirports(){
     }
 }
 
+// Function to Clear to default value ("To") ToAirportSelectField's Text when the choice in ToAirportSelect field is selected in FromAirportSelect field too
+function clearToAirportFieldOnSameAirportChoice(airportCityName){
+    if(SelectField_ToAirport_Text){ // If ToAirportSelectField's Text is initialize (has chosen Airport)
+        if(airportCityName == SelectField_ToAirport_Text.innerHTML){ // If the Airport value in ToAirportSelectField is repeated in FromAirportSelectField
+            SelectField_ToAirport_Text.innerHTML = "To"; // Return to default the value of ToAirport_SelectField's Text
+        }
+    }
+}
+
 var removedAirport = null; // Variable to store Old Removed Airport
 
 // Funtion to remove from ToAirportMenu the chosen/selected Airport Option from FromAirportMenu
-function removeChosenAirport(airportName){ // Airport's City Name = Airport's ID
+function removeChosenAirport(airportCityName){ // Airport's City Name = Airport's ID
     returnOldChosenAirport(); // Call Function to return Old Removed Airport
-    var airports = document.getElementsByName(airportName); // Find all Airport Options with the given AirportID, which is also the Airport's City Name
+    var airports = document.getElementsByName(airportCityName); // Find all Airport Options with the given AirportID, which is also the Airport's City Name
     removedAirport = airports[1]; // Update Removed Airport Option Variable with the new Airport to remove data
     airports[1].parentNode.removeChild(airports[1]); // Remove the Airport Option from ToAirportMenu, equal to the chosen Airport Option from FromAirportMenu
 }

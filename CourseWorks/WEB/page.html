@@ -21,7 +21,7 @@
             <date-picker format="DD MMMM YYYY"></date-picker>
 
             <!-- Menu Element for Flight From and To Airport Choice (FOR NOW ????) -->
-            <div class="Container_AirportsChoice">
+            <div class="Container_FlightSetup">
                 <!-- Menu Element for Flight From Airport Choice -->
                 <div class="Menu_FromAirport">
                     <div id="SelectField_FromAirport">
@@ -152,11 +152,32 @@
                     </ul>
                 </div>
 
-                <div>
-                    <button type="button" class="Switch_Airports" onclick="switchAirports()" alt="Switch Airports">Switch Airports</button>
+                <!-- Menu Element for Flight Type Choice -->
+                <div class="Menu_FlightType">
+                    <div id="SelectField_TypeFlight">
+                        <p id="SelectField_FlightType_Text">Trip</p>
+                    </div>
+                    <ul class="OptionsList_FlightType" id="OptionsList_FlightType" >
+                        <li class="Option_FlightType">
+                            <p>One way</p>
+                        </li>
+                        <li class="Option_FlightType">
+                            <p>Return</p>
+                        </li>
+                        <li class="Option_FlightType">
+                            <p>Multi-city</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Menu Element Button for Airports Choices Swap -->
+                <div class="Container_SwitchButton">
+                    <button type="button" class="Switch_Airports" onclick="switchAirports()" alt="Switch Airports"></button>
                 </div>
 
             </div>
+
+            
 
             <!-- Page and Elements' Scripts -->
             <script src="Scripts/Script_DatePicker.js"></script>

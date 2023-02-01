@@ -23,7 +23,7 @@ body{
 }
 
 /* Style for: Container with the two Airports Choice / Maybe for the all form ???? */
-.Container_AirportsChoice{
+.Container_FlightSetup{
     display: flex;
     margin-top: 16px;
 }
@@ -34,35 +34,40 @@ body{
     cursor: pointer;
 }
 
-/* Style for: FromAirport Menu */
+/* Style for: FromAirport Menu Left Page's Part Border Offset */
 .Menu_FromAirport{
     margin: 0 0 0 10px;
 }
 
-/* Style for: ToAirport Menu */
-.Menu_ToAirport{
-    margin: 0 10px 0 0;
+/* Style for: Flight Type Menu */
+.Menu_FlightType{
+    width: 125px;
+    cursor: pointer;
 }
     
-/* Style for: From and To Airport Select Fields */
-#SelectField_FromAirport, #SelectField_ToAirport{
+/* Style for: From and To Airport and Flight Type Select Fields */
+#SelectField_FromAirport, #SelectField_ToAirport,#SelectField_TypeFlight{
     /*margin-top: 16px;*/
     border: 1px solid black;
 }
 
-/* Style for: From Airport Select Field Right Border */
-#SelectField_FromAirport{
+/* Style for: From and To Airport Select Field Right Border */
+#SelectField_FromAirport,#SelectField_ToAirport{
     border-right: 0; /* Without Border */
 }
 
-/* Style for: FromAirport Select Field's Text */
-#SelectField_FromAirport_Text, #SelectField_ToAirport_Text{
+/* Style for: From and To Airport and Flight Type Select Fields' Texts */
+#SelectField_FromAirport_Text, #SelectField_ToAirport_Text,#SelectField_FlightType_Text{
     width: 100%;
     padding: 15px 20px;
     margin: 0;
     box-sizing: border-box;
     background: rgba(255,255,255,0.7);
-    /*border-radius: 6px;*/
+}
+
+/* Style for: To Airport Select Field's Text | To be on distance from Swap Button */
+#SelectField_ToAirport_Text{
+    padding: 15px 30px;
 }
 
 /* Style for: From and To Airport Options Lists (Menu with From and To Airports) */
@@ -75,13 +80,22 @@ body{
     overflow-y: scroll;
 }
 
-/* By default Airport Menu will be hidden */
+/* Style for: Flight Type Options List (Menu with the flight's type)  */
+#OptionsList_FlightType{
+    width: 100%;
+    max-height: 200px;
+    margin-top: 0;
+    padding: 0;
+    background-color: rgba(255,255,255,0.7);
+}
+
+/* By default Airports Menus will be hidden */
 .OptionsList_FromAirport, .OptionsList_ToAirport{
     visibility: hidden;
 }
 
-/* Style for: FromAirport Option */
-.Option_FromAirport, .Option_ToAirport{
+/* Style for: From and To Airport Options */
+.Option_FromAirport, .Option_ToAirport, .Option_FlightType{
     width: 100%;
     font-size: 1.1em;
     padding: 1px 0 1px 70px;
@@ -90,7 +104,12 @@ body{
     position: relative;
 }
 
-/* Style for: FromAirport Options' Image */
+/* Style for: Flight Type Options */
+.Option_FlightType{
+    padding: 1px 0px 1px 15px;
+}
+
+/* Style for: From and To Airport Options' Image */
 .Option_FromAirport img, .Option_ToAirport img{
     width:25px;
     position: absolute;
@@ -98,7 +117,38 @@ body{
     left: 25px; 
 }
 
-/* Style for: On Hover FromAirport Option */
-.Option_FromAirport:hover, .Option_ToAirport:hover{
+/* Style for: On Hover From and To Airport Options */
+.Option_FromAirport:hover, .Option_ToAirport:hover, .Option_FlightType:hover{
     background-color: rgba(255,255,255);
+}
+
+/* Style for: Swap Button Div Container */
+.Container_SwitchButton{
+    height: 40%;
+    margin-left: -380px;
+    margin-top: 5px;
+}
+
+/* Style for: Swap Airports Button */
+.Switch_Airports{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-image: url("Images/SwapButton.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* On Button Click Animation Call */
+.Switch_Airports:active{
+    animation: button_rotation 0.1s ;
+}
+
+/* Swap Button Animation*/
+@keyframes button_rotation {
+    100%{
+        transform:rotate(180deg);
+    }
+    
 }
