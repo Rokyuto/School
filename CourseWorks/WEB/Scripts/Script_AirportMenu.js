@@ -57,17 +57,17 @@ function switchAirports(){
     }
 }
 
-var removedAirport = null;
+var removedAirport = null; // Variable to store Old Removed Airport
 
 // Funtion to remove from ToAirportMenu the chosen/selected Airport Option from FromAirportMenu
 function removeChosenAirport(airportName){ // Airport's City Name = Airport's ID
-    returnOldChosenAirport();
+    returnOldChosenAirport(); // Call Function to return Old Removed Airport
     var airports = document.getElementsByName(airportName); // Find all Airport Options with the given AirportID, which is also the Airport's City Name
-    removedAirport = airports[1]; // Update Removed Airport Option Variable
+    removedAirport = airports[1]; // Update Removed Airport Option Variable with the new Airport to remove data
     airports[1].parentNode.removeChild(airports[1]); // Remove the Airport Option from ToAirportMenu, equal to the chosen Airport Option from FromAirportMenu
 }
 
-// Function to return old Airport Choice (the Airport choice before the new Airport Choice)
+// Function to return,removed, old Chosen Airport to ToAirportMenu
 function returnOldChosenAirport(){ // Airport's City Name = Airport's ID
     if(removedAirport){ // Check If there has already been chosen Airport before (client choose Airport for 2 or more times)
         createAirportOption(); // Call function to return the old Airport Choice/Option
@@ -76,19 +76,20 @@ function returnOldChosenAirport(){ // Airport's City Name = Airport's ID
 
 // Function to create ToAirport Menu Option
 function createAirportOption(){
-    var airportOption = document.createElement("li");
-    airportOption.className="Option_ToAirport";
-    airportOption.setAttribute("name",removedAirport.id)
-    airportOption.id=removedAirport.id;
-    var airportCity = document.createElement("p");
-    airportCity.textContent = removedAirport.id;
+    var airportOption = document.createElement("li"); // Create element li (option in ul list later)
+    airportOption.className="Option_ToAirport"; // Define option li's class value
+    airportOption.setAttribute("name",removedAirport.id) // Define option li's name value
+    airportOption.id=removedAirport.id; // Define option li's id value
 
-    var aircraftImg = document.createElement("img");
-    aircraftImg.src="Images/airplane.png";
-    aircraftImg.alt="Airpline Image Image";
-    airportOption.appendChild(aircraftImg);
+    var airportCity = document.createElement("p"); // Create Paragraph Element
+    airportCity.textContent = removedAirport.id; // Define paragraph element's value (Text Content)
 
-    airportOption.appendChild(airportCity); // document.createTextNode('The man who mistook his wife for a hat')
+    var aircraftImg = document.createElement("img"); // Create Image Element
+    aircraftImg.src="Images/airplane.png"; // Define Image Element's image source
+    aircraftImg.alt="Airpline Image Image"; // Define Image Element's image alternative text (when image can't be loaded)
 
-    document.getElementById('OptionsList_ToAirport').appendChild(airportOption);
+    airportOption.appendChild(aircraftImg); // Append the Image element to li option element
+    airportOption.appendChild(airportCity); // Append the paragraph element to li option element
+    document.getElementById('OptionsList_ToAirport').appendChild(airportOption); // Append li element as option to ul list (to Airport Menu)
 }
+
