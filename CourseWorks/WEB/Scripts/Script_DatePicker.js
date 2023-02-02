@@ -417,19 +417,20 @@ class DatePicker extends HTMLElement {
       }
       
       .date-toggle {
-        padding: 8px 15px;
-        border: none;
+        padding: 15px 20px; /* 8px 15px */
+        border: 1px solid black;
+        border-left:0;
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-        background: #eee;
+        background: rgba(255,255,255); /* #eee */
         color: #333;
-        border-radius: 6px;
+        /*border-radius: 6px;*/
         cursor: pointer;
         text-transform: capitalize;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 16px; /* 18px */
         cursor: pointer;
       }
       

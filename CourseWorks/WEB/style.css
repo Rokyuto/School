@@ -53,7 +53,7 @@ body{
 
 /* Style for: From and To Airport Select Field Right Border */
 #SelectField_FromAirport,#SelectField_ToAirport{
-    border-right: 0; /* Without Border */
+    border-right: 0; /* Without Right Border */
 }
 
 /* Style for: From and To Airport and Flight Type Select Fields' Texts */
@@ -127,7 +127,7 @@ body{
 
 /* Style for: Swap Button Div Container */
 .Container_SwitchButton{
-    margin-left: -500px;
+    margin-left: -870px;
     margin-top: 5px;
     height: 40%;
 }

@@ -17,12 +17,6 @@
                 <option value="BritishAirways">British Airways</option>
             </select>
 
-            <!-- Pick Element for Flight Date Choice (One way flight) -->
-            <date-picker class="departFlightDate" format="DD MMMM YYYY"></date-picker>
-
-            <!-- Pick Element for Flight Return Date Choice (return flight) -->
-            <date-picker class="returnFlightDate" id="returnFlightDate" format="DD MMMM YYYY"></date-picker>
-
             <!-- Menu Container (Element) for Flight Setup (From and To Airports, Airports Switch Button, Flight Date) -->
             <div class="Container_FlightSetup">
                 <!-- Menu Element for Flight From Airport Choice -->
@@ -162,6 +156,12 @@
                         <option class="Option_FlightType" id="Return" value="Return">Return</option>
                     </select>
                 </div>
+
+                <!-- Pick Element for Flight Date Choice (One way flight) -->
+                <date-picker class="departFlightDate" format="DD MMMM YYYY"></date-picker>
+
+                <!-- Pick Element for Flight Return Date Choice (return flight) -->
+                <date-picker class="returnFlightDate" id="returnFlightDate" format="DD MMMM YYYY"></date-picker>
 
                 <!-- Menu Element Button for Airports Choices Swap -->
                 <div class="Container_SwitchButton">
