@@ -41,12 +41,12 @@ body{
 
 /* Style for: Flight Type Menu */
 .Menu_FlightType{
-    width: 125px;
+    width: 130px;
     cursor: pointer;
 }
     
 /* Style for: From and To Airport and Flight Type Select Fields */
-#SelectField_FromAirport, #SelectField_ToAirport,#SelectField_TypeFlight{
+#SelectField_FromAirport, #SelectField_ToAirport,#Selector_FlightType{
     /*margin-top: 16px;*/
     border: 1px solid black;
 }
@@ -57,12 +57,28 @@ body{
 }
 
 /* Style for: From and To Airport and Flight Type Select Fields' Texts */
-#SelectField_FromAirport_Text, #SelectField_ToAirport_Text,#SelectField_FlightType_Text{
+#SelectField_FromAirport_Text, #SelectField_ToAirport_Text{
     width: 100%;
     padding: 15px 20px;
     margin: 0;
     box-sizing: border-box;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    border: 0;
+}
+
+/* Style for: Flight Type Selector Choice*/
+#Selector_FlightType{
+    width: 100%;
+    padding: 15.5px 20px;
+    margin: 0;
+    box-sizing: border-box;
+    background: rgba(255,255,255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 /* Style for: To Airport Select Field's Text | To be on distance from Swap Button */
@@ -76,18 +92,10 @@ body{
     max-height: 240px;
     margin-top: 0;
     padding: 0;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255);
     overflow-y: scroll;
-}
-
-/* Style for: Flight Type Options List (Menu with the flight's type)  */
-#OptionsList_FlightType{
-    width: 100%;
-    max-height: 200px;
-    margin-top: 0;
-    padding: 0;
-    background-color: rgba(255,255,255,0.7);
-}
+    box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+} 
 
 /* By default Airports Menus will be hidden */
 .OptionsList_FromAirport, .OptionsList_ToAirport{
@@ -95,18 +103,13 @@ body{
 }
 
 /* Style for: From and To Airport Options */
-.Option_FromAirport, .Option_ToAirport, .Option_FlightType{
+.Option_FromAirport, .Option_ToAirport{
     width: 100%;
     font-size: 1.1em;
     padding: 1px 0 1px 70px;
     list-style: none;
     box-sizing:border-box;
     position: relative;
-}
-
-/* Style for: Flight Type Options */
-.Option_FlightType{
-    padding: 1px 0px 1px 15px;
 }
 
 /* Style for: From and To Airport Options' Image */
@@ -119,14 +122,14 @@ body{
 
 /* Style for: On Hover From and To Airport Options */
 .Option_FromAirport:hover, .Option_ToAirport:hover, .Option_FlightType:hover{
-    background-color: rgba(255,255,255);
+    background-color: rgba(255, 230, 0, 0.5);
 }
 
 /* Style for: Swap Button Div Container */
 .Container_SwitchButton{
-    height: 40%;
-    margin-left: -380px;
+    margin-left: -500px;
     margin-top: 5px;
+    height: 40%;
 }
 
 /* Style for: Swap Airports Button */
@@ -151,4 +154,9 @@ body{
         transform:rotate(180deg);
     }
     
+}
+
+/* Style for: Return Flight Date Picker Element */
+.returnFlightDate{
+    visibility: hidden;
 }

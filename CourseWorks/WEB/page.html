@@ -17,15 +17,18 @@
                 <option value="BritishAirways">British Airways</option>
             </select>
 
-            <!-- Pick Element for Flight Date Choice -->
-            <date-picker format="DD MMMM YYYY"></date-picker>
+            <!-- Pick Element for Flight Date Choice (One way flight) -->
+            <date-picker class="departFlightDate" format="DD MMMM YYYY"></date-picker>
+
+            <!-- Pick Element for Flight Return Date Choice (return flight) -->
+            <date-picker class="returnFlightDate" id="returnFlightDate" format="DD MMMM YYYY"></date-picker>
 
             <!-- Menu Element for Flight From and To Airport Choice (FOR NOW ????) -->
             <div class="Container_FlightSetup">
                 <!-- Menu Element for Flight From Airport Choice -->
                 <div class="Menu_FromAirport">
                     <div id="SelectField_FromAirport">
-                        <p id="SelectField_FromAirport_Text">From</p>
+                        <input type="text" name="SelectField_FromAirport_Text" id="SelectField_FromAirport_Text" placeholder="From" autocomplete="off">
                     </div>
                     <ul id="OptionsList_FromAirport" class="OptionsList_FromAirport">
                         <li class="Option_FromAirport" name="Sofia" id="Sofia">
@@ -90,7 +93,7 @@
                 <!-- Menu Element for Flight To Airport Choice -->
                 <div class="Menu_ToAirport">
                     <div id="SelectField_ToAirport">
-                        <p id="SelectField_ToAirport_Text">To</p>
+                        <input type="text" name="SelectField_ToAirport_Text" id="SelectField_ToAirport_Text" placeholder="To" autocomplete="off">
                     </div>
                     <ul id="OptionsList_ToAirport" class="OptionsList_ToAirport">
                         <li class="Option_ToAirport" name="Sofia" id="Sofia">
@@ -154,20 +157,10 @@
 
                 <!-- Menu Element for Flight Type Choice -->
                 <div class="Menu_FlightType">
-                    <div id="SelectField_TypeFlight">
-                        <p id="SelectField_FlightType_Text">Trip</p>
-                    </div>
-                    <ul class="OptionsList_FlightType" id="OptionsList_FlightType" >
-                        <li class="Option_FlightType">
-                            <p>One way</p>
-                        </li>
-                        <li class="Option_FlightType">
-                            <p>Return</p>
-                        </li>
-                        <li class="Option_FlightType">
-                            <p>Multi-city</p>
-                        </li>
-                    </ul>
+                    <select class="Selector_FlightType" id="Selector_FlightType" name="Selector_FlightType" onchange="flightTypeChoice()">
+                        <option class="Option_FlightType" id="One way" value="One way">One way</option>
+                        <option class="Option_FlightType" id="Return" value="Return">Return</option>
+                    </select>
                 </div>
 
                 <!-- Menu Element Button for Airports Choices Swap -->
@@ -177,11 +170,10 @@
 
             </div>
 
-            
-
             <!-- Page and Elements' Scripts -->
-            <script src="Scripts/Script_DatePicker.js"></script>
-            <script src="Scripts/Script_AirportMenu.js"></script>
+            <script src="Scripts/Script_DatePicker.js" type="text/javascript"></script>
+            <script src="Scripts/Script_AirportMenu.js" type="text/javascript"></script>
+            <script src="Scripts/Script_FlightType.js" type="text/javascript"></script>
         </form>
     </body>
 </html>

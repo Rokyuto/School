@@ -3,6 +3,7 @@ function isLeapYear(year) {
   return year % 100 === 0 ? year % 400 === 0 : year % 4 === 0;
 }
 
+// Day Obejct
 class Day {
   constructor(date = null, lang = 'default') {
     date = date ?? new Date();
@@ -47,6 +48,7 @@ class Day {
   }
 }
 
+// Month Object
 class Month {
   constructor(date = null, lang = 'default') {
     const day = new Day(date, lang);
@@ -77,6 +79,7 @@ class Month {
   }
 }
 
+// Calendar Obejct
 class Calendar {
   weekDays = Array.from({length: 7});
   
@@ -159,7 +162,7 @@ class Calendar {
   }
 }
 
-// Date Picker Element
+// Date Picker Object
 class DatePicker extends HTMLElement {
   format = 'DD MMM YYYY';
   position = 'bottom';
@@ -172,7 +175,7 @@ class DatePicker extends HTMLElement {
   calendarDateElement = null;
   calendarDaysContainer = null;
   selectedDayElement = null;
-  
+
   constructor() {
     super();
     
@@ -213,7 +216,6 @@ class DatePicker extends HTMLElement {
     this.renderCalendarDays();
   }
   
-  /*
   attributeChangedCallback(name, oldValue, newValue) {
     if(!this.mounted) return;
     
@@ -242,7 +244,7 @@ class DatePicker extends HTMLElement {
           `calendar-dropdown ${this.visible ? 'visible' : ''} ${this.position}`;
         break;
     }
-  }*/
+  }
   
   // Function to toggle (switch) calendar's visibility
   toggleCalendar(visible = null) {

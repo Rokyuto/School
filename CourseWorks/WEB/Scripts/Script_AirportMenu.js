@@ -13,7 +13,8 @@ SelectField_FromAirport.onclick = function() {
 for(FromAirport of List_FromAirports){
     FromAirport.onclick = function(){ // On Click Event
         clearToAirportFieldOnSameAirportChoice(this.textContent);
-        SelectField_FromAirport_Text.innerHTML = this.textContent; // Change FromAirportSelectField's Text in HTML page to clicked From Airport Option Element's Text
+        SelectField_FromAirport_Text.value = this.id; // Change FromAirportSelectField's Text in HTML page to clicked From Airport Option Element's Text
+        console.log(SelectField_FromAirport_Text)
         removeChosenAirport(this.id); // Call Function to remove from ToAirport Menu, the chosen (clicked) Airport from FromAirport Menu
         OptionList_FromAirports.classList.toggle("OptionsList_FromAirport"); // Toggle (hide) FromAirport Options List Visibility
     }
@@ -35,26 +36,26 @@ SelectField_ToAirport.onclick = function() {
 // ForEach Airport Loop in List with To Aiprort
 for(toAirport of List_ToAirports){
     toAirport.onclick = function(){ // On Click Event
-        SelectField_ToAirport_Text.innerHTML = this.textContent; // Change ToAirportSelectField's Text in HTML page to clicked To Airport Option Element's Text
+        SelectField_ToAirport_Text.value = this.id; // Change ToAirportSelectField's Text in HTML page to clicked To Airport Option Element's Text
         OptionList_ToAirports.classList.toggle("OptionsList_ToAirport"); // Toggle (hide) ToAirport Options List Visibility
     }
 }
 
-// Switch Airports Button's Function
+// Switch Airports Choices Button's Function
 function switchAirports(){
-    if(SelectField_FromAirport_Text.innerHTML != "From" && SelectField_ToAirport_Text.innerHTML == "To"){
-        SelectField_ToAirport_Text.innerHTML = SelectField_FromAirport_Text.innerHTML;
-        SelectField_FromAirport_Text.innerHTML = "From";
+    if(SelectField_FromAirport_Text.value != "From" && SelectField_ToAirport_Text.value == "To"){ // If To Select Field is empty
+        SelectField_ToAirport_Text.value = SelectField_FromAirport_Text.value;
+        SelectField_FromAirport_Text.value = "From";
         
     }
-    else if(SelectField_ToAirport_Text.innerHTML != "To" && SelectField_FromAirport_Text.innerHTML == "From"){
-        SelectField_FromAirport_Text.innerHTML = SelectField_ToAirport_Text.innerHTML;
-        SelectField_ToAirport_Text.innerHTML = "To";
+    else if(SelectField_ToAirport_Text.value != "To" && SelectField_FromAirport_Text.value == "From"){ // If From Select Field is empty
+        SelectField_FromAirport_Text.value = SelectField_ToAirport_Text.value;
+        SelectField_ToAirport_Text.value = "To";
     }
-    else if(SelectField_FromAirport_Text.innerHTML != "From" && SelectField_ToAirport_Text.innerHTML != "To"){
-        var temp = SelectField_FromAirport_Text.innerHTML;
-        SelectField_FromAirport_Text.innerHTML = SelectField_ToAirport_Text.innerHTML;
-        SelectField_ToAirport_Text.innerHTML = temp;
+    else if(SelectField_FromAirport_Text.value != "From" && SelectField_ToAirport_Text.value != "To"){ // If the two Select Fields are filled
+        var temp = SelectField_FromAirport_Text.value;
+        SelectField_FromAirport_Text.value = SelectField_ToAirport_Text.value;
+        SelectField_ToAirport_Text.value = temp;
     }
 }
 
@@ -102,4 +103,3 @@ function createAirportOption(){
     airportOption.appendChild(airportCity); // Append the paragraph element to li option element
     document.getElementById('OptionsList_ToAirport').appendChild(airportOption); // Append li element as option to ul list (to Airport Menu)
 }
-
