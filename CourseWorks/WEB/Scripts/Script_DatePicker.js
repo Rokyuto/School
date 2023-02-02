@@ -308,6 +308,12 @@ class DatePicker extends HTMLElement {
   selectDay(el, day) {
     if(day.isEqualTo(this.date)) return;
     
+    /* Custom (my addition): If clicked date is from previous month or the date is previous than today, then do nothing */
+    if(day.monthNumber < this.date.monthNumber || day.date < this.date.date){
+      alert("You can't select a date, which is previous than today.");
+      return;
+    }
+
     this.date = day;
     
     if(day.monthNumber !== this.calendar.month.number) {
