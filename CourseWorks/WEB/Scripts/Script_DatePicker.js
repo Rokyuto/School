@@ -307,9 +307,11 @@ class DatePicker extends HTMLElement {
   // Function for selecting Date
   selectDay(el, day) {
     if(day.isEqualTo(this.date)) return;
+
+    var today = new Day(); // Variable to store information about the current day (today)
     
     /* Custom (my addition): If clicked date is from previous month or the date is previous than today, then do nothing */
-    if(day.monthNumber < this.date.monthNumber || day.date < this.date.date){
+    if(day.monthNumber < today.monthNumber || day.date < today.date){
       alert("You can't select a date, which is previous than today.");
       return;
     }
@@ -444,6 +446,7 @@ class DatePicker extends HTMLElement {
         border-radius: 5px;
         box-shadow: 0 0 8px rgba(0,0,0,0.2);
         cursor: pointer;
+        z-index:1; /* Custom (my addition): set calendar dropdown on top of the other flight elements, by bigger z-index */
       }
       
       .calendar-dropdown.top {
@@ -550,12 +553,14 @@ class DatePicker extends HTMLElement {
       }
       
       .month-day.selected {
-        background: #28a5a7;
-        color: #ffffff;
+        /*background: #28a5a7;
+        color: #ffffff;*/
+        background:rgba(255, 230, 0);
       }
       
       .month-day:hover {
-        background: #34bd61;
+        /*background: #34bd61;*/
+        background:rgba(255, 230, 0, 0.5);
       }
     `;
   }
