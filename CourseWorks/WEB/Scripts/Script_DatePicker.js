@@ -441,7 +441,7 @@ class DatePicker extends HTMLElement {
         position: absolute;
         top: 100%;
         left: 50%;
-        transform: translate(-50%, 8px);
+        transform: translate(-50%, -75%); /* -50%, 8px */
         padding: 20px;
         background: #fff;
         border-radius: 5px;
