@@ -14,7 +14,6 @@ for(FromAirport of List_FromAirports){
     FromAirport.onclick = function(){ // On Click Event
         clearToAirportFieldOnSameAirportChoice(this.textContent);
         SelectField_FromAirport_Text.value = this.id; // Change FromAirportSelectField's Text in HTML page to clicked From Airport Option Element's Text
-        console.log(SelectField_FromAirport_Text)
         removeChosenAirport(this.id); // Call Function to remove from ToAirport Menu, the chosen (clicked) Airport from FromAirport Menu
         OptionList_FromAirports.classList.toggle("OptionsList_FromAirport"); // Toggle (hide) FromAirport Options List Visibility
     }
@@ -41,22 +40,29 @@ for(toAirport of List_ToAirports){
     }
 }
 
-// Switch Airports Choices Button's Function
-function switchAirports(){
-    if(SelectField_FromAirport_Text.value != "From" && SelectField_ToAirport_Text.value == "To"){ // If To Select Field is empty
+// Swap Airports Choices Button's Function
+function swapAirports(){
+    var cityNameForSwap = null; // Variable to store the city Name, to give information about which city Name Option must be removed
+    if(SelectField_FromAirport_Text.value != null && SelectField_ToAirport_Text.value == null){ // If To Select Field is empty
         SelectField_ToAirport_Text.value = SelectField_FromAirport_Text.value;
         SelectField_FromAirport_Text.value = "From";
-        
+        return;
     }
-    else if(SelectField_ToAirport_Text.value != "To" && SelectField_FromAirport_Text.value == "From"){ // If From Select Field is empty
+    else if(SelectField_ToAirport_Text.value != null && SelectField_FromAirport_Text.value == null){ // If From Select Field is empty
         SelectField_FromAirport_Text.value = SelectField_ToAirport_Text.value;
+        cityNameForSwap = SelectField_FromAirport_Text.value;
         SelectField_ToAirport_Text.value = "To";
     }
-    else if(SelectField_FromAirport_Text.value != "From" && SelectField_ToAirport_Text.value != "To"){ // If the two Select Fields are filled
-        var temp = SelectField_FromAirport_Text.value;
-        SelectField_FromAirport_Text.value = SelectField_ToAirport_Text.value;
-        SelectField_ToAirport_Text.value = temp;
+    else if(SelectField_FromAirport_Text.value != null && SelectField_ToAirport_Text.value != null){ // If the two Select Fields are filled
+        cityNameForSwap = SelectField_ToAirport_Text.value;
+        SelectField_ToAirport_Text.value = SelectField_FromAirport_Text.value;
+        SelectField_FromAirport_Text.value= cityNameForSwap;
     }
+    if(cityNameForSwap){ // If cityNameForSwap has value (is not null/empty)
+        removeChosenAirport(cityNameForSwap); // Call Function to remove as Option from ToAirport Option List the swapped city Name
+        return;
+    }
+    
 }
 
 // Function to Clear to default value ("To") ToAirportSelectField's Text when the choice in ToAirportSelect field is selected in FromAirportSelect field too

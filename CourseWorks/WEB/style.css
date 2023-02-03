@@ -8,24 +8,16 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* Style for: Menu with Flight Airline Choice */
-.Menu_FlightAirline{
-    position: relative;
-    padding: 0.5em 2em 0.5em 0.5em;
-    font-size: 18px;
-    background-color: rgba(80, 80, 100, 0.9);
-    color: white;
-    border: 0;
-    appearance: none;
-    outline: none;
-    cursor: pointer;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
 /* Style for: Container with the two Airports Choice / Maybe for the all form ???? */
 .Container_FlightSetup{
     display: flex;
     margin-top: 16px;
+}
+
+/* Style for: Flight Airline Menu */
+.Menu_FlightAirline{
+    width: 200px;
+    cursor: pointer;
 }
 
 /* Style for: From and To Airport Menus */
@@ -34,26 +26,27 @@ body{
     cursor: pointer;
 }
 
-/* Style for: FromAirport Menu Left Page's Part Border Offset */
-.Menu_FromAirport{
-    margin: 0 0 0 10px;
-}
-
 /* Style for: Flight Type Menu */
 .Menu_FlightType{
     width: 130px;
     cursor: pointer;
 }
     
-/* Style for: From and To Airport and Flight Type Select Fields */
-#SelectField_FromAirport, #SelectField_ToAirport,#Selector_FlightType{
+/* Style for: From and To Airport, Flight Type and Flight Airline Select Fields */
+#SelectField_FromAirport, #SelectField_ToAirport,#Selector_FlightType,#Selector_FlightAirline{
     /*margin-top: 16px;*/
     border: 1px solid black;
+    outline: none;
 }
 
 /* Style for: From and To Airport Select Field Right Border */
-#SelectField_FromAirport,#SelectField_ToAirport{
+#SelectField_FromAirport,#SelectField_ToAirport,#Selector_FlightAirline{
     border-right: 0; /* Without Right Border */
+}
+
+/* Style for: Menu with Flight Airline Choice*/
+#Selector_FlightAirline{
+    width: 100%;
 }
 
 /* Style for: From and To Airport and Flight Type Select Fields' Texts */
@@ -66,10 +59,11 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
     border: 0;
+    outline: none;
 }
 
-/* Style for: Flight Type Selector Choice*/
-#Selector_FlightType{
+/* Style for: Flight Type and Flight Airline Selector Choice*/
+#Selector_FlightType, #Selector_FlightAirline{
     width: 100%;
     padding: 15.5px 20px;
     margin: 0;
@@ -79,6 +73,7 @@ body{
     font-size: 16px;
     -webkit-appearance: none;
     -moz-appearance: none;
+    cursor: pointer;
 }
 
 /* Style for: To Airport Select Field's Text | To be on distance from Swap Button */
@@ -121,19 +116,19 @@ body{
 }
 
 /* Style for: On Hover From and To Airport Options */
-.Option_FromAirport:hover, .Option_ToAirport:hover, .Option_FlightType:hover{
+.Option_FromAirport:hover, .Option_ToAirport:hover{
     background-color: rgba(255, 230, 0, 0.5);
 }
 
 /* Style for: Swap Button Div Container */
-.Container_SwitchButton{
+.Container_SwapButton{
     margin-left: -870px;
     margin-top: 5px;
     height: 40%;
 }
 
 /* Style for: Swap Airports Button */
-.Switch_Airports{
+.Swap_Airports{
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -144,7 +139,7 @@ body{
 }
 
 /* On Button Click Animation Call */
-.Switch_Airports:active{
+.Swap_Airports:active{
     animation: button_rotation 0.1s ;
 }
 

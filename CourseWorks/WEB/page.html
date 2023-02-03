@@ -9,16 +9,20 @@
     </head>
     <body>
         <form action="action.php" method="POST">
-            <!-- Menu Element for Flight Airline Choice -->
-            <select class="Menu_FlightAirline" name="FlightAirline" id="FlightAirline">
-                <option hidden disabled selected="Choose your airline">Choose your airline</option>
-                <option value="QatarAirways">Qatar Airways</option>
-                <option value="Emirates">Emirates</option>
-                <option value="BritishAirways">British Airways</option>
-            </select>
 
-            <!-- Menu Container (Element) for Flight Setup (From and To Airports, Airports Switch Button, Flight Date) -->
+            <!-- Menus Container (Element) for Flight Setup (Flight Airline, From and To Airports, Airports Switch Button, Flight Date) -->
             <div class="Container_FlightSetup">
+
+                <!-- Menu Element for Flight Airline Choice -->
+                <div class="Menu_FlightAirline">
+                    <select class="Selector_FlightAirline" id="Selector_FlightAirline" name="Selector_FlightAirline">
+                        <option class="Option_FlightAirline" hidden disabled selected="Choose your airline">Choose your airline</option>
+                        <option class="Option_FlightAirline" value="QatarAirways">Qatar Airways</option>
+                        <option class="Option_FlightAirline" value="Emirates">Emirates</option>
+                        <option class="Option_FlightAirline" value="BritishAirways">British Airways</option>
+                    </select>
+                </div>
+                
                 <!-- Menu Element for Flight From Airport Choice -->
                 <div class="Menu_FromAirport">
                     <div id="SelectField_FromAirport">
@@ -164,8 +168,8 @@
                 <date-picker class="returnFlightDate" id="returnFlightDate" format="DD MMMM YYYY"></date-picker>
 
                 <!-- Menu Element Button for Airports Choices Swap -->
-                <div class="Container_SwitchButton">
-                    <button type="button" class="Switch_Airports" onclick="switchAirports()" alt="Switch Airports"></button>
+                <div class="Container_SwapButton">
+                    <button type="button" class="Swap_Airports" onclick="swapAirports()" alt="Swap Airports"></button>
                 </div>
 
             </div>

@@ -2,5 +2,6 @@
     "java.project.sourcePaths": [
         "U_A_S_D/src",
         "3_kurs/src"
-    ]
+    ],
+    "liveServer.settings.port": 5609
 }
