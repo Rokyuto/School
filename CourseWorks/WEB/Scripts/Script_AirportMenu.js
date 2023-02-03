@@ -29,7 +29,19 @@ var OptionList_ToAirports = document.getElementById("OptionsList_ToAirport"); //
 
 // ToAirport Select Field On Click Event
 SelectField_ToAirport.onclick = function() {
+    keyboardInputCheck(); // Call Function to handle keyboard input in FromAirport Select Field
     OptionList_ToAirports.classList.toggle("OptionsList_ToAirport"); // Toggle (hide) ToAirport Options List Visibility
+}
+
+// Function to check if keyboard input in FromAirport Select Field is the same as any of the ToAirport Options List and if true -> delete it
+function keyboardInputCheck(){
+    if(SelectField_FromAirport_Text.value){ // Check if FromAirport Select Field has value | Default there is no value and has placeholder
+        for(toAirport of List_ToAirports){ // Iterate through toAirports Options List
+            if(toAirport.id == SelectField_FromAirport_Text.value){ // Check if FromAirport Select Field's value is equal to any of ToAirport Options List, if true then
+                removeChosenAirport(SelectField_FromAirport_Text.value); // Call Function to Remove the Option, with the same value as FromAirport SelectField's value
+            }
+        }
+    }
 }
 
 // ForEach Airport Loop in List with To Aiprort
