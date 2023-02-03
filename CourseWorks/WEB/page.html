@@ -165,14 +165,22 @@
                 <date-picker class="departFlightDate" format="DD MMMM YYYY"></date-picker>
 
                 <!-- Pick Element for Flight Return Date Choice (return flight) -->
-                <date-picker class="returnFlightDate" id="returnFlightDate" format="DD MMMM YYYY"></date-picker>
+                <div>
+                    <div class="Container_NoReturnFlightDate" id="Container_NoReturnFlightDate">
+                        <p class="hideNoReturn">No Return</p>
+                    </div>
+
+                    <date-picker class="returnFlightDate" id="returnFlightDate" format="DD MMMM YYYY"></date-picker>
+                </div>
+
+                <div class="Container_ShowFlightsButton">
+                    <button type="button" class="Show_Flights" alt="Show Flights">Show Flights</button>
+                </div>
 
                 <!-- Menu Element Button for Airports Choices Swap -->
                 <div class="Container_SwapButton">
                     <button type="button" class="Swap_Airports" onclick="swapAirports()" alt="Swap Airports"></button>
                 </div>
-
-                
 
             </div>
 

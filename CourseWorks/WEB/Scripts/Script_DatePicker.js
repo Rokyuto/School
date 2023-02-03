@@ -417,7 +417,7 @@ class DatePicker extends HTMLElement {
       }
       
       .date-toggle {
-        padding: 15px 20px; /* 8px 15px */
+        padding: 16px 20px; /* 8px 15px */
         border: 1px solid black;
         border-left:0;
         -webkit-appearance: none;

@@ -8,6 +8,8 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* ---------------------- SCROLLBARS ---------------------- */
+
 /* Style for: all elements type scrollbar in the page */
 ::-webkit-scrollbar{
     width:10px;
@@ -20,16 +22,23 @@ body{
     background-color: rgba(255, 230, 0); /*background-color: rgb(255, 238, 0);*/
 }
 
+/* ---------------------- FLIGHT SETUP CONTAINER ---------------------- */
+
 /* Style for: Container with the two Airports Choice / Maybe for the all form ???? */
 .Container_FlightSetup{
     display: flex;
+    /*position: fixed;
+    width: 100%;*/
     margin-top: 16px;
 }
 
+/* ---------------------- MENUS ---------------------- */
+
 /* Style for: Flight Airline Menu */
 .Menu_FlightAirline{
-    width: 200px;
+    width: 220px;
     cursor: pointer;
+    /*display: block;*/
 }
 
 /* Style for: From and To Airport Menus */
@@ -43,9 +52,11 @@ body{
     width: 130px;
     cursor: pointer;
 }
+
+/* ---------------------- SELECTORS & SELECT FIELDS ---------------------- */
     
 /* Style for: From and To Airport, Flight Type and Flight Airline Select Fields */
-#SelectField_FromAirport, #SelectField_ToAirport,#Selector_FlightType,#Selector_FlightAirline{
+#SelectField_FromAirport, #SelectField_ToAirport,#Selector_FlightType,#Selector_FlightAirline,.Container_NoReturnFlightDate{
     /*margin-top: 16px;*/
     border: 1px solid black;
     outline: none;
@@ -69,7 +80,7 @@ body{
     box-sizing: border-box;
     background: rgba(255,255,255);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
+    font-size: 1.1em;
     border: 0;
     outline: none;
 }
@@ -82,7 +93,7 @@ body{
     box-sizing: border-box;
     background: rgba(255,255,255);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
+    font-size: 1.1em;
     -webkit-appearance: none;
     -moz-appearance: none;
     cursor: pointer;
@@ -93,6 +104,8 @@ body{
     padding: 15px 30px;
 }
 
+/* ---------------------- OPTIONS ---------------------- */
+
 /* Style for: From and To Airport Options Lists (Menu with From and To Airports) */
 #OptionsList_FromAirport , #OptionsList_ToAirport{
     width: 100%;
@@ -102,11 +115,6 @@ body{
     background-color: rgba(255,255,255);
     overflow-y: scroll;
     box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.25);
-}
-
-/* By default Airports Menus will be hidden */
-.OptionsList_FromAirport, .OptionsList_ToAirport{
-    visibility: hidden;
 }
 
 /* Style for: From and To Airport Options */
@@ -132,11 +140,14 @@ body{
     background-color: rgba(255, 230, 0, 0.5);
 }
 
+/* ---------------------- BUTTONS ---------------------- */
+
 /* Style for: Swap Button Div Container */
 .Container_SwapButton{
     margin-left: -870px;
     margin-top: 5px;
     height: 40%;
+   /* z-index: 1;*/
 }
 
 /* Style for: Swap Airports Button */
@@ -148,6 +159,7 @@ body{
     background-image: url("Images/SwapButton.png");
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
 }
 
 /* On Button Click Animation Call */
@@ -163,7 +175,59 @@ body{
     
 }
 
-/* Style for: Return Flight Date Picker Element | Default the element is hidden, will be visible when the client choose Return Flight Type by using toggle */
+/* Style for: Show Flights Button's Conatainer */
+.Container_ShowFlightsButton{
+    width: 180px;
+    height: 53px;
+}
+
+/* Style for: Button to show flights with the specified setup */
+.Show_Flights{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #ffa600;
+    font-size: 1.1em;
+    padding: 2px 40px 0px 0px;
+    border-radius: 6px;
+    border:0;
+    outline: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+/* Style for: Button to show flights On Click Effect */
+.Show_Flights:active{
+    background-color: #ffb42a;
+}
+
+/* Style for: No Return Flight Label Container, which is visible when the flight type is 'One way' */
+#Container_NoReturnFlightDate{
+    height:51px;
+    background-color: rgba(255, 255, 255, 0.349);
+    font-size: 1.1em;
+    border-left: 0;
+}
+
+/* Style for: No Return Flight Label Text, which is visible when the flight type is 'One way' */
+#Container_NoReturnFlightDate > p{
+    text-align: center;
+    margin: 15px;
+}
+
+/* ---------------------- VISIBILITIES ---------------------- */
+
+/* Style for: Return Flight Date Picker Element | By default the element is hidden, will be visible when the client choose Return Flight Type by using toggle */
 .returnFlightDate{
     visibility: hidden;
+}
+
+/* Style for: Airports Menu Elements | By default Airports Menus will be hidden */
+.OptionsList_FromAirport, .OptionsList_ToAirport{
+    visibility: hidden;
+}
+
+/* Style for: No Return Flight Type Label | By default the flight type is 'One way' so the 'No Return' element/container will be visible | Called to toggle (change) the visibility */
+.hideNoReturn{
+    visibility: visible;
 }
