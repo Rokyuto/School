@@ -10,15 +10,14 @@ body{
 
 /* Style for: all elements type scrollbar in the page */
 ::-webkit-scrollbar{
-    width:5px;
-    background-color: rgba(255, 230, 0);
-    box-shadow: inset 0 1px 3px rgb(255, 94, 0);
+    width:10px;
+    background-color: rgb(255, 246, 182);
+    /*box-shadow: inset 0 1px 3px rgb(255, 94, 0);*/
 }
 
 /* Style for: all elements type scrollbar thumb in the page */
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(255, 238, 0);
-
+    background-color: rgba(255, 230, 0); /*background-color: rgb(255, 238, 0);*/
 }
 
 /* Style for: Container with the two Airports Choice / Maybe for the all form ???? */
@@ -164,7 +163,7 @@ body{
     
 }
 
-/* Style for: Return Flight Date Picker Element */
+/* Style for: Return Flight Date Picker Element | Default the element is hidden, will be visible when the client choose Return Flight Type by using toggle */
 .returnFlightDate{
     visibility: hidden;
 }

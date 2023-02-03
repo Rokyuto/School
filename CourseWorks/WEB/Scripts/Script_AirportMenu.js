@@ -4,9 +4,18 @@ var SelectField_FromAirport_Text = document.getElementById("SelectField_FromAirp
 var List_FromAirports = document.getElementsByClassName("Option_FromAirport"); // Initialize all From Airport Options
 var OptionList_FromAirports = document.getElementById("OptionsList_FromAirport"); // Initialize Menu List Element with From Airports Options
 
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Variables to get To Airport Menu Elements (get them from the HTML page)
+var SelectField_ToAirport = document.getElementById("SelectField_ToAirport"); // Initialize To Airport Selector Elemen
+var SelectField_ToAirport_Text = document.getElementById("SelectField_ToAirport_Text"); // Initialize To Airport Selector Element's Text
+var List_ToAirports = document.getElementsByClassName("Option_ToAirport"); // Initialize all To Airport Options
+var OptionList_ToAirports = document.getElementById("OptionsList_ToAirport"); // Initialize Menu List Element with To Airports Options
+
 // FromAirport Select Field On Click Event
 SelectField_FromAirport.onclick = function() {
-    OptionList_FromAirports.classList.toggle("OptionsList_FromAirport"); // Toggle (hide) FromAirport Options List Visibility
+    OptionList_FromAirports.classList.toggle("OptionsList_FromAirport"); // Toggle (show) FromAirport Options List Visibility
+    hideOpositeAirportField(OptionList_ToAirports,"OptionsList_ToAirport"); // Call Function to hide the ToAirport Options List if he is opened
 }
 
 // ForEach Airport Loop in List with From Aiprort
@@ -19,18 +28,26 @@ for(FromAirport of List_FromAirports){
     }
 }
 
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-// Variables to get To Airport Menu Elements (get them from the HTML page)
-var SelectField_ToAirport = document.getElementById("SelectField_ToAirport"); // Initialize To Airport Selector Elemen
-var SelectField_ToAirport_Text = document.getElementById("SelectField_ToAirport_Text"); // Initialize To Airport Selector Element's Text
-var List_ToAirports = document.getElementsByClassName("Option_ToAirport"); // Initialize all To Airport Options
-var OptionList_ToAirports = document.getElementById("OptionsList_ToAirport"); // Initialize Menu List Element with To Airports Options
-
 // ToAirport Select Field On Click Event
 SelectField_ToAirport.onclick = function() {
     keyboardInputCheck(); // Call Function to handle keyboard input in FromAirport Select Field
-    OptionList_ToAirports.classList.toggle("OptionsList_ToAirport"); // Toggle (hide) ToAirport Options List Visibility
+    OptionList_ToAirports.classList.toggle("OptionsList_ToAirport"); // Toggle (show) ToAirport Options List Visibility
+    hideOpositeAirportField(OptionList_FromAirports,"OptionsList_FromAirport"); // Call Function to hide the FromAirport Options List if he is opened
+}
+
+// ForEach Airport Loop in List with To Aiprort
+for(toAirport of List_ToAirports){
+    toAirport.onclick = function(){ // On Click Event
+        SelectField_ToAirport_Text.value = this.id; // Change ToAirportSelectField's Text in HTML page to clicked To Airport Option Element's Text
+        OptionList_ToAirports.classList.toggle("OptionsList_ToAirport"); // Toggle (hide) ToAirport Options List Visibility
+    }
+}
+
+// Function to hide the given Airport Option List if he is opened (visible) | Function is called when the client open the other (opposite) Airport Option List
+function hideOpositeAirportField(optionList,optionsListId){
+    if(!optionList.className) { // Check if the ul (Options List) has class value (name) | If he has, then the ul is hidden, if he isn't having className, then he is vissible
+        optionList.classList.toggle(optionsListId); // Toggle (hide) the Given Options List
+    }
 }
 
 // Function to check if keyboard input in FromAirport Select Field is the same as any of the ToAirport Options List and if true -> delete it
@@ -41,14 +58,6 @@ function keyboardInputCheck(){
                 removeChosenAirport(SelectField_FromAirport_Text.value); // Call Function to Remove the Option, with the same value as FromAirport SelectField's value
             }
         }
-    }
-}
-
-// ForEach Airport Loop in List with To Aiprort
-for(toAirport of List_ToAirports){
-    toAirport.onclick = function(){ // On Click Event
-        SelectField_ToAirport_Text.value = this.id; // Change ToAirportSelectField's Text in HTML page to clicked To Airport Option Element's Text
-        OptionList_ToAirports.classList.toggle("OptionsList_ToAirport"); // Toggle (hide) ToAirport Options List Visibility
     }
 }
 
