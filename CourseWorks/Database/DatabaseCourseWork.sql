@@ -30,15 +30,15 @@ create table Flights(
     foreign key(FlightPilot) references Pilot(PilotID),
     foreign key(FlightAircraft) references Aircraft(AircraftID)
     foreign key(FlightFoodType) references Food(FoodID)
-    
     */
 );
 
 /* Pilot to Flight M:M Connection Table */
 create table PilotToFlight(
-	PilotID int not null,
+	ID int not null auto_increment primary key,
+	PilotID int not null, 
     FlightID int not null,
-    primary key(PilotID,FlightID),
+    /*primary key(Flight,PilotID,FlightID),*/
     foreign key(PilotID) references Pilot(PilotID),
     foreign key(FlightID) references Flights(FlightID)
 );
@@ -63,11 +63,11 @@ create table FoodToFlight(
 
 
 /* Наряди на пилоти - Pilots' Shifts */
-create table PilotsShifts(
+create table PilotShift(
 	PilotID int not null,
-	PilotShiftStartTime time not null,
-    PilotShiftEndTime time not null,
-    primary key(PilotID)
+	PilotShiftStartTime datetime not null,
+    PilotShiftEndTime datetime not null,
+    primary key(PilotID,PilotShiftStartTime,PilotShiftEndTime)
 );
 
 
@@ -76,7 +76,9 @@ create table ReplacePilot(
 	FlightDate date not null,
 	PilotToReplaceID int not null,
     ReplacePilotID int not null,
-    primary key(FlightDate, PilotToReplaceID, ReplacePilotID)
+    primary key(FlightDate, PilotToReplaceID, ReplacePilotID),
+    foreign key(PilotToReplaceID) references Pilot(PilotID),
+    foreign key(ReplacePilotID) references Pilot(PilotID)
 );
 
 
