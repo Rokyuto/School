@@ -1,40 +1,32 @@
-create database Aircompany;
+create database IF NOT EXISTS Aircompany;
 use Aircompany;
 
-create table Pilot(
+create table IF NOT EXISTS Pilot(
 	PilotID int auto_increment not null primary key,
     PilotName varchar(60) not null
 );
 
-create table Aircraft(
+create table IF NOT EXISTS Aircraft(
 	AircraftID int auto_increment not null primary key,
     AircraftModel varchar(60) not null
 );
 
-create table Food(
+create table IF NOT EXISTS Food(
 	FoodID int auto_increment not null primary key,
     FoodName varchar(60) not null
 );
 
-create table Flights(
+create table IF NOT EXISTS Flights(
 	FlightID int auto_increment not null primary key,
 	FlightDate date not null,
 	FlightDepartTime time not null,
 	FlightDuration time not null,
 	FlightStartAirport varchar(60) not null,
 	FlightEndAirport varchar(60) not null
-	/*
-    FlightAircraft int not null,
-	FlightPilot int not null,
-	FlightFoodType int not null,
-    foreign key(FlightPilot) references Pilot(PilotID),
-    foreign key(FlightAircraft) references Aircraft(AircraftID)
-    foreign key(FlightFoodType) references Food(FoodID)
-    */
 );
 
 /* Pilot to Flight M:M Connection Table */
-create table PilotToFlight(
+create table IF NOT EXISTS PilotToFlight(
 	ID int not null auto_increment primary key,
 	PilotID int not null, 
     FlightID int not null,
@@ -44,7 +36,7 @@ create table PilotToFlight(
 );
 
 /* Aircraft to Flight M:M Connection Table */
-create table AircraftToFlight(
+create table IF NOT EXISTS AircraftToFlight(
 	AircraftID int not null,
     FlightID int not null,
     primary key(AircraftID,FlightID),
@@ -53,7 +45,7 @@ create table AircraftToFlight(
 );
 
 /* Food to Flight M:M Connection Table */
-create table FoodToFlight(
+create table IF NOT EXISTS FoodToFlight(
 	FoodID int not null,
     FlightID int not null,
     primary key(FoodID,FlightID),
@@ -61,24 +53,21 @@ create table FoodToFlight(
     foreign key(FlightID) references Flights(FlightID)
 );
 
-
 /* Наряди на пилоти - Pilots' Shifts */
-create table PilotShift(
+create table IF NOT EXISTS PilotShift(
 	PilotID int not null,
 	PilotShiftStartTime datetime not null,
     PilotShiftEndTime datetime not null,
-    primary key(PilotID,PilotShiftStartTime,PilotShiftEndTime)
+    primary key(PilotID,PilotShiftStartTime,PilotShiftEndTime),
+    foreign key(PilotID) references Pilot(PilotID)
 );
 
-
 /* Заместване на пилот - Replace Pilot */
-create table ReplacePilot(
-	FlightDate date not null,
+create table IF NOT EXISTS ReplacePilot(
+	Date date not null,
 	PilotToReplaceID int not null,
     ReplacePilotID int not null,
-    primary key(FlightDate, PilotToReplaceID, ReplacePilotID),
+    primary key(Date, PilotToReplaceID, ReplacePilotID),
     foreign key(PilotToReplaceID) references Pilot(PilotID),
     foreign key(ReplacePilotID) references Pilot(PilotID)
 );
-
-
