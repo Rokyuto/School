@@ -1,22 +1,22 @@
-create database IF NOT EXISTS Aircompany;
+create database Aircompany;
 use Aircompany;
 
-create table IF NOT EXISTS Pilot(
+create table Pilot(
 	PilotID int auto_increment not null primary key,
     PilotName varchar(60) not null
 );
 
-create table IF NOT EXISTS Aircraft(
+create table Aircraft(
 	AircraftID int auto_increment not null primary key,
     AircraftModel varchar(60) not null
 );
 
-create table IF NOT EXISTS Food(
+create table Food(
 	FoodID int auto_increment not null primary key,
     FoodName varchar(60) not null
 );
 
-create table IF NOT EXISTS Flights(
+create table Flights(
 	FlightID int auto_increment not null primary key,
 	FlightDate date not null,
 	FlightDepartTime time not null,
@@ -26,7 +26,7 @@ create table IF NOT EXISTS Flights(
 );
 
 /* Pilot to Flight M:M Connection Table */
-create table IF NOT EXISTS PilotToFlight(
+create table PilotToFlight(
 	ID int not null auto_increment primary key,
 	PilotID int not null, 
     FlightID int not null,
@@ -36,7 +36,7 @@ create table IF NOT EXISTS PilotToFlight(
 );
 
 /* Aircraft to Flight M:M Connection Table */
-create table IF NOT EXISTS AircraftToFlight(
+create table AircraftToFlight(
 	AircraftID int not null,
     FlightID int not null,
     primary key(AircraftID,FlightID),
@@ -45,7 +45,7 @@ create table IF NOT EXISTS AircraftToFlight(
 );
 
 /* Food to Flight M:M Connection Table */
-create table IF NOT EXISTS FoodToFlight(
+create table FoodToFlight(
 	FoodID int not null,
     FlightID int not null,
     primary key(FoodID,FlightID),
@@ -54,7 +54,7 @@ create table IF NOT EXISTS FoodToFlight(
 );
 
 /* Наряди на пилоти - Pilots' Shifts */
-create table IF NOT EXISTS PilotShift(
+create table PilotShift(
 	PilotID int not null,
 	PilotShiftStartTime datetime not null,
     PilotShiftEndTime datetime not null,
@@ -63,7 +63,7 @@ create table IF NOT EXISTS PilotShift(
 );
 
 /* Заместване на пилот - Replace Pilot */
-create table IF NOT EXISTS ReplacePilot(
+create table ReplacePilot(
 	Date date not null,
 	PilotToReplaceID int not null,
     ReplacePilotID int not null,
