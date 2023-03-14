@@ -15,5 +15,19 @@ public class Test {
         kniga.setCena(cena);
         System.out.println(kniga.getCena());
         System.out.println(kniga.checkPromo());
+
+        try{
+            changeTelevizorPower();
+        }
+        catch (PowerException e){
+            e.getMessage();
+        }
+    }
+
+    public static void changeTelevizorPower() throws PowerException{
+        Scanner myScanner = new Scanner(System.in);
+        if (myScanner.nextInt() < 0){
+            throw new PowerException();
+        }
     }
 }
