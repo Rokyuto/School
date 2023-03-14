@@ -1,4 +1,4 @@
-package OOP_lectures.src.OOP_Abstraction;
+package OOP_lectures.OOP_Abstraction;
 
 public interface Interface {
     int i = 10; // In the Interfaces the variables are public final static = public constants variables = can't be edited from outside
