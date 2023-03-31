@@ -1,7 +1,7 @@
 {
     "java.project.sourcePaths": [
         "U_A_S_D/src",
-        "3_kurs/src"
+        "4kurs/JAVA/src/OOP_exersices/CustomExceptions"
     ],
     "liveServer.settings.port": 5609
 }
