@@ -16,13 +16,25 @@ create table Food(
     FoodName varchar(60) not null
 );
 
+create table Airports(
+	AirportID int auto_increment not null primary key,
+    Airport varchar(60) not null
+);
+
 create table Flights(
 	FlightID int auto_increment not null primary key,
 	FlightDate date not null,
 	FlightDepartTime time not null,
 	FlightDuration time not null,
-	FlightStartAirport varchar(60) not null,
-	FlightEndAirport varchar(60) not null
+	FlightStartAirport int not null,
+	FlightEndAirport int not null,
+    FlightAircraft int not null,
+    FlightFood int not null,
+    foreign key(FlightStartAirport) references Airports(AirportID),
+    foreign key(FlightEndAirport) references Airports(AirportID),
+    foreign key(FlightAircraft) references Aircraft(AircraftID),
+    foreign key(FlightFood) references Food(FoodID)
+    
 );
 
 /* Pilot to Flight M:M Connection Table */
@@ -32,24 +44,6 @@ create table PilotToFlight(
     FlightID int not null,
     /*primary key(Flight,PilotID,FlightID),*/
     foreign key(PilotID) references Pilot(PilotID),
-    foreign key(FlightID) references Flights(FlightID)
-);
-
-/* Aircraft to Flight M:M Connection Table */
-create table AircraftToFlight(
-	AircraftID int not null,
-    FlightID int not null,
-    primary key(AircraftID,FlightID),
-    foreign key(AircraftID) references Aircraft(AircraftID),
-    foreign key(FlightID) references Flights(FlightID)
-);
-
-/* Food to Flight M:M Connection Table */
-create table FoodToFlight(
-	FoodID int not null,
-    FlightID int not null,
-    primary key(FoodID,FlightID),
-    foreign key(FoodID) references Food(FoodID),
     foreign key(FlightID) references Flights(FlightID)
 );
 
@@ -64,10 +58,10 @@ create table PilotShift(
 
 /* Заместване на пилот - Replace Pilot */
 create table ReplacePilot(
-	Date date not null,
+	ReplaceDate date not null,
 	PilotToReplaceID int not null,
     ReplacePilotID int not null,
-    primary key(Date, PilotToReplaceID, ReplacePilotID),
+    primary key(ReplaceDate, PilotToReplaceID, ReplacePilotID),
     foreign key(PilotToReplaceID) references Pilot(PilotID),
     foreign key(ReplacePilotID) references Pilot(PilotID)
 );
