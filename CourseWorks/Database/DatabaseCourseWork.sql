@@ -29,22 +29,13 @@ create table Flights(
 	FlightStartAirport int not null,
 	FlightEndAirport int not null,
     FlightAircraft int not null,
+    FlightPilot int not null,
     FlightFood int not null,
     foreign key(FlightStartAirport) references Airports(AirportID),
     foreign key(FlightEndAirport) references Airports(AirportID),
     foreign key(FlightAircraft) references Aircraft(AircraftID),
+    foreign key(FlightPilot) references Pilot(PilotID),
     foreign key(FlightFood) references Food(FoodID)
-    
-);
-
-/* Pilot to Flight M:M Connection Table */
-create table PilotToFlight(
-	ID int not null auto_increment primary key,
-	PilotID int not null, 
-    FlightID int not null,
-    /*primary key(Flight,PilotID,FlightID),*/
-    foreign key(PilotID) references Pilot(PilotID),
-    foreign key(FlightID) references Flights(FlightID)
 );
 
 /* Наряди на пилоти - Pilots' Shifts */

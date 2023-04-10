@@ -1,6 +1,5 @@
 USE aircompany;
-select *,count(*) FoodGroupCount 
+select FoodName,count(*) FoodGroupSize 
 from flights
-join food,foodtoflight 
-where flights.FlightID = foodtoflight.FlightID and foodtoflight.FoodID = food.FoodID
+join food on flights.FlightFood = food.FoodID
 group by FoodName
