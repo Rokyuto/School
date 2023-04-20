@@ -18,3 +18,4 @@ awk 'BEGIN{sum = 0} {sum+=$4} END{print sum}' marks.txt
 awk 'BEGIN{count = 0} {count++} END{print count}' marks.txt
 awk 'BEGIN{sum = 0;count = 0} ($2=="Ani") {sum+=$4;count++} END{print sum/count}' marks.txt
 find ~ -name "*.html" -type f -exec ls -l {} '+' | awk 'BEGIN{sum=0} {sum+=$5} END{print sum/1024" KB"}'
+date +%D | awk 'BEGIN{FS="/";OFS="/"}{print $2,$1,$3}'
