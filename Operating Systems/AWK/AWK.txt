@@ -1,0 +1,20 @@
+awk '{print $0}' marks.txt
+awk '{print}' marks.txt
+awk '{print $1}' marks.txt
+awk '{print $2, $4/10}' marks.txt
+awk '{print $2,$4, $4/10}' marks.txt
+awk '($4 > 80) {print $0}' marks.txt
+awk '($2 = "Ani") {print $0}' marks.txt
+awk '($3 = "Physics") {print $0}' marks.txt
+awk '($3 = "Physics" && $2 = "Ani") {print $0}' marks.txt
+awk '($3 == "Physics" && $2 == "Ani") {print $0}' marks.txt
+ls -l | awk '($5 == 0){print $9}'
+awk '{print NR,$0}' marks.txt
+awk '(NR < 15){print NR,$0}' marks.txt
+awk '(NR > 10 && NR < 15){print NR,$0}' marks.txt
+ls -l | awk '(NR > 1){print NR,$0}'
+awk 'BEGIN{print "Hello"} {print} END{print "Bye bye"}' marks.txt
+awk 'BEGIN{sum = 0} {sum+=$4} END{print sum}' marks.txt
+awk 'BEGIN{count = 0} {count++} END{print count}' marks.txt
+awk 'BEGIN{sum = 0;count = 0} ($2=="Ani") {sum+=$4;count++} END{print sum/count}' marks.txt
+find ~ -name "*.html" -type f -exec ls -l {} '+' | awk 'BEGIN{sum=0} {sum+=$5} END{print sum/1024" KB"}'
