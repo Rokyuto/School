@@ -24,6 +24,6 @@ public class Tour extends Trip implements NightsCount{
 
     @Override
     public int setNightsCount(int tourDays) {
-        return tourDays - 1;
+        return tourDays;
     }
 }
