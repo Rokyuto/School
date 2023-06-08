@@ -1,0 +1,1 @@
+grep -cE '^([a-z]{4})$' /usr/sharp/dict/words

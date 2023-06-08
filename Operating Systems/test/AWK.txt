@@ -1,0 +1,7 @@
+awk '{ sum += $1 } END { print sum }' nums -> Sum the nums in nums file
+
+awk 'BEGIN {biggestNum = $1} { if(biggestNum < $1) {biggestNum = $1} } END { print biggestNum }' nums  -> Finds the biggest num in nums file
+
+awk 'BEGIN { count = 0 } /^$/ { count++ } END { print count }' file1.txt -> Find all empty rows
+
+ls -l | awk '/\.html$/ { if ($5 > max_size) { max_size = $5; max_file = $9 } } END { print max_file }' -> Return the biggest sized html file
