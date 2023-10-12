@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+    <link rel="stylesheet" href="style-form.css">
+</head>
+<body>
+    <form action="action.php" method="get">
+        <fieldset>
+            <legend>Информация:</legend>
+
+            <div class="form-group">
+                <label for="firstName">Име:</label>
+                <input type="text" name="fname" id="firstName" required >
+            </div>
+            <div class="form-group">
+                <label for="LastName">Фамилия:</label>
+                <input type="text" name="lname" id="LastName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Имейл:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="birthday">Дата на раждане:</label>
+                <input type="date" name="birthday" id="birthday" max="2023-09-28" min="1923-01-01">
+            </div>
+            <div class="form-group">
+                <div class="left-control">Пол:</div>
+                <div class="right-control">
+                    <input type="radio" name="gender" id="male" value="male" checked><label for="male">Мъж</label>
+                    <input type="radio" name="gender" id="female" value="female"><label for="female">Жена</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="left-control">Образование:</div>
+                <div class="right-control">
+                    <input type="checkbox" name="education" id="Master" value="Master">Магистър</input>
+                    <input type="checkbox" name="education" id="Bachelor" value="Bachelor">Бакалавър</input>
+                    <input type="checkbox" name="education" id="Phd" value="Phd">Докторантура</input>
+                </div>
+            </div>
+
+            <textarea name="note" id="note" rows="10" placeholder="Въведи текст..."></textarea>
+
+            <input type="submit" value="Изпрати">
+        </fieldset>
+    </form>
+</body>
+</html>
