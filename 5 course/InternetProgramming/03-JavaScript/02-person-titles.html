@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Извеждане на обръщение</title>
+</head>
+<body>
+    <script>
+        function personTitles(arg1, arg2, arg3){
+            let name = arg1
+            let age = arg2
+            let gender = arg3
+            let title
+
+            if (age < 16) {
+                if(gender === "f")
+                {
+                   title = "Момиче" 
+                }
+                else{
+                    title = "Момче" 
+                }
+            }
+            else{
+                if (gender === "f") 
+                {
+                   title = "Г-жа" 
+                }
+                else{
+                    title = "Г-н" 
+                }
+            }
+            return `${title} ${name} е на ${age} години`
+        }
+        console.log(personTitles("Иван Стоянов", 34, "м"))
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лице на кръг</title>
+</head>
+<body>
+    <h2>Лице на кръг</h2>
+    <input type="text" id="r" placeholder="Въведете радиус"><br>
+    <input type="button" value="Изчисли" onclick="calcArea()">
+    <input type="button" value="Изчисти" onclick="resetValues()">
+    <p id="info"></p>
+
+    <script>
+        function calcArea(){
+            let radius = parseFloat(document.getElementById("r").value)
+            if(radius !== null && radius !== "" && radius > 0){
+                let s = Math.PI * radius
+                document.getElementById('info').textContent = s.toFixed(2)
+            }
+            else{
+                document.getElementById('info').textContent = "Грешна стойност!"
+            }
+        }
+
+        function resetValues(){
+            document.getElementById('r').value = ""
+            document.getElementById("info").textContent = ""
+        }
+    </script>
+</body>
+</html>

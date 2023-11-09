@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Четно число</title>
+</head>
+<body>
+    <h1>Извеждане на число</h1>
+    <label for="num">Въведете число</label>
+    <input type="text" id="num">
+    <button onclick="getEvenNumber()">Изведи</button>
+    <p id="info"></p>
+
+    <script>
+        function getEvenNumber(){
+            let number = parseInt(document.getElementById("num").value)
+            if (!isNaN(number)) {   
+                let result = (number % 2 === 0) ? "Четно" : "Нечетно"
+                //console.log(number)
+                // if (number % 2 === 0) {
+                //     result = "Четно"
+                // } else { 
+                //     result = "Нечетно"
+                // }
+                document.getElementById("info").textContent = result
+            }
+            else{
+                document.getElementById("info").textContent = "Не е въведено число"
+            }
+            
+        }
+    </script>
+</body>
+</html>

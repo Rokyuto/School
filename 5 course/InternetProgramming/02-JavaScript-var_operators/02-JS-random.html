@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Случайни числа</title>
+</head>
+<body>
+    <script>
+        let num1 = Math.random()
+        let num2 = num1 * 10
+        let num3 = Math.ceil(num2)
+        let num = Math.ceil(Math.random() * 100)
+
+        console.log(num1)
+        console.log(num2)
+        console.log(num3)
+        console.log(num)
+
+        let txt = "Случайно число 0-1: " + num1
+        txt += "\nСлучайно число 0-10: " + num2
+        txt += "\nСлучайно число 1-10 включително: " + num3
+
+        showResult(num)
+        function showResult(res){
+            alert(res)
+        }
+
+        showResult(txt)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Data Types</title>
+</head>
+<body>
+    <script>
+        let number1 = 20
+        let number2 = 15.48
+
+        let color = "Green"
+        let lastName = 'Ivanov'
+
+        let y = true
+        let z = false
+
+        let birthday = new Date("2005-03-11")
+
+        let studentGrade = [ 5 , 4 , 6 , 3 , 6 ]
+
+        let person = {name: "Ivan Petkov", age: 18, job: "programmer"}
+
+        let zero = null
+
+        let undeclaredVariable
+
+        // document.write("<p>" + number1 + " - " + typeof number1 + "</p>")
+        // document.write("<p>" + number2 + " - " + typeof number2 + "</p>")
+
+        getDataType(number1)
+        getDataType(number2)
+        getDataType(color)
+        getDataType(lastName)
+        getDataType(y)
+        getDataType(z)
+        getDataType(birthday)
+        getDataType(birthday.getFullYear())
+        getDataType(studentGrade)
+        getDataType(person)
+        getDataType(person.name)
+        getDataType(zero)
+        getDataType(undeclaredVariable)
+
+
+        function getDataType(x){
+            document.write(`<p> ${x} - ${typeof x} </p>`)
+        }
+    </script>
+</body>
+</html>

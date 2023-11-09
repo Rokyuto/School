@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigInt Data Type</title>
+</head>
+<body>
+    <script>
+
+        const maxNumber = BigInt(Number.MAX_SAFE_INTEGER)
+        const minNumber = BigInt(Number.MIN_SAFE_INTEGER)
+
+        console.log(maxNumber, typeof maxNumber)
+        console.log(minNumber, typeof minNumber)
+        console.log(Number(maxNumber) + 1 === Number(maxNumber) + 2)
+
+    </script>
+</body>
+</html>

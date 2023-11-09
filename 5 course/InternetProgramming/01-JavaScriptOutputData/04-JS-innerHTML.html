@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Извеждане със свойство HTML</title>
+</head>
+<body>
+    <p id="info">Изчислението на</p>
+    <p id="print"></p>
+    <script>
+        let p = document.getElementById("info")
+        p.innerHTML += ` сумата е <i><ins>${300+ 50}</ins></i> `
+        document.getElementById("print").textContent = p.textContent
+    </script>
+</body>
+</html>

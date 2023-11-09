@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Извеждане на числа</title>
+</head>
+<body>
+    <button type="button" onclick="printNumbers(10,25)">Изведи</button>
+    <p id="result"></p>
+
+    <script>
+        function printNumbers(num1, num2){
+            if(num1 > num2){
+                let temp = num1
+                num1 = num2
+                num2 = temp
+            }
+
+            let i = num1
+            let text = ""
+            do{
+                text += "Числото е: " + i + "<br>"
+                document.getElementById("result").innerHTML = text
+                i++
+            }while(i <= num2)
+
+        }
+    </script>
+</body>
+</html>

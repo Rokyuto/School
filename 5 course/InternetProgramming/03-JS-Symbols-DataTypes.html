@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let symbol1 = Symbol()
+        let symbol2 = Symbol("abc")
+        let symbol3 = Symbol("abc")
+
+        console.log(symbol1, typeof symbol1)
+        console.log(symbol2, typeof symbol2)
+        console.log(symbol2 === symbol3)
+    </script>
+</body>
+</html>
