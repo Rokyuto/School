@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Печат на триъгълник с букви</title>
+</head>
+<body>
+    <script>
+        function drawAlphabetTriangle(){
+            for (let index = 70; index >= 65; index--) {
+                for (let j = 65; j <= index; j++) {
+                    document.write(String.fromCharCode(j))     
+                }
+                document.write("<br>")
+            }
+        }
+
+        drawAlphabetTriangle()
+    </script>
+</body>
+</html>

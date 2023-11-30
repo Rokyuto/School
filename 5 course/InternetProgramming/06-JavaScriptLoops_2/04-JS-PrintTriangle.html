@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изчертаване на триъгълник</title>
+</head>
+<body>
+    <script>
+        function drawTriangle(n){
+            for (let index = 1; index <= n; index++) {
+                let emotes = "&#128512;"
+                for (let j = 1; j < index; j++) {
+                    emotes+="&#128512;"   
+                }
+                document.write(emotes + "<br>")
+            }
+        }
+        drawTriangle(6)
+    </script>
+</body>
+</html>

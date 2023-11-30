@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изчертаване на правоъгълник с n * n звездички</title>
+</head>
+<body>
+    <script>
+        function drawSquare(n){
+            for (let index = 1; index <= n; index++) {
+                let stars = "*"
+
+                for (let j = 1; j < n; j++) {
+                    stars+="*"            
+                }
+                document.write(stars + "<br>")
+            }
+        }
+
+        drawSquare(4)
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Преобразуване на температурата от Фаренхайт към Целзий</title>
+</head>
+<body>
+    <h2>Преобразуване на температурата от Фаренхайт към Целзий</h2>
+    <p></p>
+
+    <script>
+        const celsius = convertTemperature(85)
+        document.getElementsByTagName("p")[0].innerHTML = "Температурата е: " + Math.trunc(celsius) + "&#8451"
+        function convertTemperature(fahrenheit){
+            return (5/9) * (fahrenheit - 32)
+        }
+    </script>
+
+</body>
+</html>

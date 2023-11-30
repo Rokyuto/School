@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изчертаване на правоъгълник с n * m емотикони</title>
+</head>
+<body>
+    <script>
+        function drawSquare(row,column){
+            for (let index = 1; index <= row; index++) {
+                let emotes = "&#128512;"
+                for (let j = 1; j < column; j++) {
+                    emotes+="&#128512;"   
+                }
+                document.write(emotes + "<br>")
+            }
+        }
+
+        drawSquare(4,6)
+    </script>
+</body>
+</html>

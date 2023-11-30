@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сумиране на числа с обект arguments</title>
+</head>
+<body>
+    <p>Сумата на <span></span>.</p>
+    <script>
+        function sumNumbers(){
+            let total = 0;
+            console.log(arguments)
+            for (let index = 0; index < arguments.length; index++) {
+                total += arguments[index];
+            }
+            return arguments.length + " числа е: " + total
+        }
+
+        document.querySelector("p span").textContent = sumNumbers(10,3,7,25,40,1)
+    </script>
+</body>
+</html>

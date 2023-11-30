@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const age = prompt("Въведете вашата възраст: ", 18)
+        let message = function (txt) { alert(txt) }
+        
+        if (age < 14) {
+            message("Лицето не получава паспорт")
+        }
+        else if (age >= 14 && age < 18) {
+            message("Лицето получава паспорт за непълнолетни")
+        }
+        else{
+            message("Лицето получава паспорт за пълнолетен")
+        }
+
+    </script>
+</body>
+</html>
