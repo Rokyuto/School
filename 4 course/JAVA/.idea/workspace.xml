@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="336e9581-9d63-4a0e-92d6-68c7c72f2b43" name="Changes" comment="Custom Exceptions and Databases CourseWork Finished">
-      <change beforePath="$PROJECT_DIR$/../../.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vscode/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CourseWorks/Database/CourseWorkDocumentation.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OOP_exersices/BMICalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP_exersices/BMICalculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

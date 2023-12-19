@@ -18,6 +18,8 @@ public class BMICalculator {
         System.out.println("weight: " + userWeight);
         System.out.println("height: " + userHeight);
         bmiFor(userWeight,userHeight);
+        
+
     }
 
     public static void bmiFor(double weight,double height){

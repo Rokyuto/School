@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вложени функции</title>
+</head>
+<body>
+    <script>
+        function triangleHupotenuse(a, b){
+
+            function square(side){
+                return Math.pow( side , 2 )
+            }
+
+            let hypotenuse = Math.sqrt( square(a) ) + Math.sqrt( square(b) )
+            return hypotenuse
+        }
+  
+        document.write(triangleHupotenuse(5,6))
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            display: inline-block;
+            width: 2em;
+            height: 2em;
+            line-height: 2em;
+            text-align: center;
+            font-size: 1.5em;
+            background-color: black;
+            color: white;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <button onclick="stopCounter()">Стоп</button>
+    <script>
+        let flag = true;
+        let i = 1;
+        while (flag) {
+            setTimeout(function () { document.querySelector(".box").textContent = i } ,i * 1000 )
+            i++
+            function stopCounter(){
+                return flag = false
+            }
+        }
+    </script>
+</body>
+</html>
