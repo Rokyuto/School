@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="print"></p>
+    <script>
+        let car = "&#128663";
+        let police = "&#128659";
+        let truck = "&#128666";
+        let taxi = "&#128661";
+        let tram = "&#128651";
+
+        let transport = new Array(car,police,truck,taxi,tram)
+        document.write(transport + "<br>");
+
+        let ambulance = "&#128657";
+        let bus = "&#128652";
+        let tractor = "&#128668";
+
+        transport.unshift(ambulance) // 1. Add ambulance (SHIFT elements with 1 to right and add ambulance)
+        transport.push(tractor) // 2. Add tractor (APPEND)
+        transport.splice(3,0,bus) // 3. Add Buss (INSERT)
+
+        document.write(transport + "<br>");
+
+        transport.splice(5,1) // 4. Remove Taxi
+
+        // 5. Print auto with it's indexs
+        for (auto of transport) {
+            document.write("Element at index " + transport.indexOf(auto) + " is " + auto + "<br>")
+        }
+
+        // 6. Print form 3rd to 5th vehicle by creating new Array
+        let newTransport = transport.slice(2,5)
+        document.write(newTransport + "<br>")
+
+        // 7. Print with spaces
+        for (vehicle of newTransport) {
+            document.write("&nbsp".repeat(newTransport.indexOf(vehicle)) + vehicle + "<br>")
+        }
+
+        // 8. Create transport signs and merge it with newTransport Array
+        let signs = new Array("&#9940","&#128679", "&#128683")
+        document.write(signs.concat(newTransport))
+
+
+    </script>
+</body>
+</html>
