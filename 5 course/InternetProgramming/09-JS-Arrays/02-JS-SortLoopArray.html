@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Capitals</h2>
+    <div></div>
+
+    <script>
+        let capitals = ["Sofia","Belgrade","Paris","Athens","Moscow"]
+        capitals.sort()
+
+        let capitalsList = "<ol>"
+        for (let capital of capitals) {
+            capitalsList += `<li>${capital}</li>`
+        }
+        capitalsList += "</ol>"
+        document.querySelector("div").innerHTML = capitalsList
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript array methods</title>
+</head>
+<body>
+    <h2>Array of nums</h2>
+    <p id="text"></p>
+    <button onclick="addFirstEl()">Add first element</button>
+    <button onclick="addLastEl()">Add last element</button>
+    <button onclick="delFirstEl()">Delete first element</button>
+    <button onclick="delLastEl()">Delete last element</button><br><br>
+
+    Enter element's number:<input type="number" id="n" style="width: 40px;">
+    <button onclick="delEl()">Remove</button>
+
+    <script>
+        let numbers = new Array(1,2,3,4,5)
+        showArray()
+        
+        function showArray(){
+            document.getElementById("text").innerHTML = numbers.join(" | ")
+        }
+
+        function addFirstEl() {
+            numbers.unshift(numbers[0] - 1)
+            showArray()
+        }
+        
+        function delfFirstEl(){
+            numbers.shift();
+            showArray()
+        }
+
+        function defLastEl(){
+            numbers.pop()
+            showArray()
+        }
+
+    </script>
+
+</body>
+</html>
