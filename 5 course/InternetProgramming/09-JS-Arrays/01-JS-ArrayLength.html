@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let countries = ["France","Bulgaria","Turkey","Serbia","Denmark"]
+        countries[2] = "Spain"
+        countries[countries.length - 1] = "Norway"
+        countries[countries.length] = "Germany"
+        document.write("<p>" + countries.join(", " + "</p>"))
+        document.write("<p>" + countries.length + "</p>")
+    </script>
+</body>
+</html>
