@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <script>
+        function Student(id,name,theoryGrade,practiceGrade){
+            this.id = id;
+            this.name = name;
+            this.theoryGrade = theoryGrade;
+            this.practiceGrade = practiceGrade;
+        }
+
+        const student1 = new Student(19201, "Alex Ivanov", 5.50, 4.75)
+        const student2 = new Student(19202, "Ivan Ivov", 3.80, 5.25)
+
+        document.querySelectorAll("p")[0].innerHTML = `${student1.id} ${student1.name} - ${((student1.theoryGrade + student1.practiceGrade)/2).toFixed(2)}`
+        document.querySelectorAll("p")[1].innerHTML = `${student2.id} ${student2.name} - ${((student2.theoryGrade + student2.practiceGrade)/2).toFixed(2)}`
+
+    </script>
+</body>
+</html>

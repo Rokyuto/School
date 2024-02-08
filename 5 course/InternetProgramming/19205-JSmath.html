@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Лице на кръг</h2>
+    AD: <input type="number" id="ADside" placeholder="Стойност за AD"><br>
+    DC: <input type="number" id="DCside" placeholder="Стойност за DC"><br>
+    &alpha;: <input type="number" id="angle" min="0" max="180" placeholder="Ъгъл"><br>
+    <button type="button" onclick="reset()">Изчисти</button>
+    <button type="button" onclick="calculate()">Пресметни</button>
+    <p id="result"></p>
+    <script>
+
+        function reset(){
+            document.getElementById("ADside").value = ""
+            document.getElementById("DCside").value = ""
+            document.getElementById("angle").value = ""
+            document.getElementById("result").textContent = ""
+        }
+
+        function calculate(){
+            
+            let ad = parseFloat(document.getElementById("ADside").value)
+            let dc = parseFloat(document.getElementById("DCside").value)
+            let angle = parseFloat(document.getElementById("angle").value)
+
+            if(ad == null || ad == "" || ad <= 0 || isNaN(ad)){ 
+                alert("Грешна стойност за AD")
+            }
+            else if(dc == null || dc == "" || dc <= 0 || isNaN(dc)){ 
+                alert("Грешна стойност за DC")
+            }
+            else if(angle == null || angle == "" || angle < 0 || angle > 180 || isNaN(angle)){ 
+                alert("Грешна стойност за Ъгъл")
+            }
+            else{
+                let angleInRad = angle * (Math.PI / 180)
+                let sinFromAngle = Math.sin(angleInRad)
+                let area = ad * dc * sinFromAngle
+                document.getElementById("result").textContent = "Лицето на успоредника е: " + area.toFixed(3)
+            }
+        }   
+
+    </script>
+</body>
+</html>

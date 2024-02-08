@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <script>
+        let student = {
+            id: 19230,
+            name: 'Alex Ivanov',
+            theoryGrade: 5.50,
+            practiceGrade: 4.25,
+            dziGrade: function(){
+                let finalGrade = (this.practiceGrade + this.theoryGrade) / 2;
+                return finalGrade.toFixed(2)
+            }
+        }
+        document.querySelector("p").innerHTML = `${student.id} ${student.name} <br>
+        <em>Оценка теория: </em>${student.theoryGrade}<br>
+        <em>Оценка практика: </em>${student.practiceGrade}<br>
+        <em>Оценка: </em>${student.dziGrade}`
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function splitString(stringToSplit,separator){
+            return stringToSplit.split(separator)
+        }
+
+        const stringOfNumbers = "1 2 3 4 5"
+        const stringOfWords = "Променливи,Операции,Конструкции,Масиви,Функции"
+        const space = " "
+        const comma = ","
+
+        const arrayOfNumbers = splitString(stringOfNumbers,space)
+        const arrayOfWords = splitString(stringOfWords,comma)
+        console.log(arrayOfNumbers)
+        console.log(arrayOfWords)
+
+        let header = "Съдържание"
+        let output = `<h3>${header}</h3><ul>`
+        for (let index = 0; index < arrayOfWords.length; index++) {
+            output += `<li> Глава ${arrayOfWords[index]}: ${arrayOfWords[index]}</li>`
+        }
+        output += `</ul>`
+
+        document.write(output)
+
+    </script>
+</body>
+</html>

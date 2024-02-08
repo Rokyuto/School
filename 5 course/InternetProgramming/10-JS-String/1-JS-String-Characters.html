@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "Това е низ.", str_new = ""
+
+        let char1 = "Първият знак от низа е: " + str.charAt(0)
+        let char2 = "Последният знак от низа е: " + str.charAt(str.length - 1)
+
+        for (let index = 0; index < str.length; index++) {
+            if (str.charAt(index) !== "e") str_new += str.charAt(index)
+            else str_new += "E"
+        }
+
+        let result = "Новият низ е: " + str_new + "\n"
+        alert(char1 + "\n" + char2 + "\n" + result)
+
+    </script>
+</body>
+</html>
