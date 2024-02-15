@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let space = new Array("&#127758","&#127775","&#127771","&#127760","&#127774")
+        document.write(space + "<br>");
+
+        space.unshift('1')
+        document.write(space + "<br>")
+
+        space.push('@')
+        document.write(space + "<br>")
+
+        space.pop()
+        document.write(space + "<br>")
+
+        space.splice(2,0,"&#127770;")
+        document.write(space + "<br>")
+
+        let newArray = space.slice(2,5)
+        document.write(newArray + "<br>")
+
+        let symbolsArray = new Array("*","&","$")
+        document.write(space.concat(symbolsArray) + "<br>")
+
+        for (element of space) {
+            document.write(element + "&nbsp".repeat(5))
+        }
+
+    </script>
+</body>
+</html>
