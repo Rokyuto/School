@@ -8,29 +8,33 @@
 <body>
     <script>
         let space = new Array("&#127758","&#127775","&#127771","&#127760","&#127774")
-        document.write(space + "<br>");
+        document.write("<p>" + space + "</p>");
 
         space.unshift('1')
-        document.write(space + "<br>")
+        document.write("<p>" + space + "</p>")
 
         space.push('@')
-        document.write(space + "<br>")
+        document.write("<p>" + space + "</p>")
 
         space.pop()
-        document.write(space + "<br>")
+        document.write("<p>" + space + "</p>")
 
         space.splice(2,0,"&#127770;")
-        document.write(space + "<br>")
+        document.write("<p>" + space + "</p>")
 
         let newArray = space.slice(2,5)
-        document.write(newArray + "<br>")
+        document.write("<p>" + newArray + "</p>")
 
         let symbolsArray = new Array("*","&","$")
-        document.write(space.concat(symbolsArray) + "<br>")
+        document.write("<p>" + space.concat(symbolsArray) + "</p>")
+        
+        //for (element of space) { document.write(element + "&nbsp".repeat(5)) }
 
-        for (element of space) {
-            document.write(element + "&nbsp".repeat(5))
+        let finalString = ""
+        for (element of space){
+            finalString = finalString + element + "&nbsp".repeat(5)
         }
+        document.write("<p>" + finalString + "</p>")
 
     </script>
 </body>
