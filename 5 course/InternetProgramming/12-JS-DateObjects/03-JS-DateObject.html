@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 class="info">Calculate Age</h3>
+    <p class="info"></p>
+
+    <script>
+        let today = new Date()
+
+        const person = {
+            firstName: "Iva",
+            lastName: "Stoyanova",
+            birthday: new Date("02/26/1970"),
+            pAge: function(){
+                let age = today - this.birthday;
+                return Math.floor(age/31557600000);
+            }
+        }
+
+        let x = document.getElementsByClassName("info")
+        x[1].innerHTML = person.firstName + " " + person.lastName + " is " + person.pAge() + " years old"
+    </script>
+
+</body>
+</html>

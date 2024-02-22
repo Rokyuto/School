@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <script>
+        let time = new Date()
+
+        let hour = time.getHours()
+        let min = time.getMinutes()
+        let sec = time.getSeconds()
+
+        let greeting = "Morning"
+        if(hour > 10){
+            greeting  = "Day"
+        }
+        if (hour > 18) {
+            greeting = "Evening"
+        }
+
+        let t = document.getElementsByTagName("p")
+        t[0].innerHTML = "<em>" + greeting + "</em>"
+        t[1].textContent = "The time now is " + hour + " hour " + min + " minutes " + sec + " secunds."
+
+    </script>
+</body>
+</html>
