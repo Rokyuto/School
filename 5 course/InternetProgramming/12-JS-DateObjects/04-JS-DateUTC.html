@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let time = new Date()
+
+        let localHour = time.getHours()
+        let greenwichHour = time.getUTCHours()
+        let minutes = time.getMinutes()
+
+        if (minutes <= 9) {
+            minutes = "0" + mn
+        }
+
+        let greenwichTime  = "Greenwich Time: " + greenwichHour + " : " + minutes + "\n\n"
+        let localTime = "Time in Sofia is: " + localHour + " : " + minutes + "\n\n"
+        let chicagoTime = "Time in Chicago is: " + (greenwichHour - 5) + " : " + minutes + "\n\n"
+
+        alert(greenwichTime + localTIme + chicagoTime)
+    </script>
+</body>
+</html>
