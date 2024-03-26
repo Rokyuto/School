@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Page title</h1>
+    <h2>Styled header with JavaScript 1</h2>
+    <h2>Styled header with JavaScript 2</h2>
+
+    <button type="button" onclick="changeHeading('h2')">Click</button>
+
+    <script>
+        function changeHeading(element){
+            let heading = document.getElementsByTagName(element)
+            for (let h of heading) {
+                h.style.color = 'red'
+            }
+        }
+    </script>
+</body>
+</html>

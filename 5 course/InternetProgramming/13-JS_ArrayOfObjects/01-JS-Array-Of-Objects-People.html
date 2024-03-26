@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myObject = {
+            toni: {
+                name: 'Toni',
+                age: 35,
+                gender: 'male'
+            },
+            eva: {
+                name: 'Eva',
+                age: 28,
+                gender: 'female'
+            }
+        }
+
+        console.log('Print 1st way: ' + myObject.toni.gender)
+        console.log('Print 2nd way: ' + myObject.eva['age'])
+        delete myObject.eva
+
+        for (let key in myObject) {
+            console.log(myObject[key])
+        }
+    </script>
+</body>
+</html>

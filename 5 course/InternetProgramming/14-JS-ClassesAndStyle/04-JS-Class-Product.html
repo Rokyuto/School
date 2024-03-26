@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        class Product {
+            constructor(name, price,quantity) {
+                this.name = name
+                this.price = price
+                this.quantity = quantity
+            }
+            calcDDS(){
+                return this.price * 1.2
+            }
+            total(){
+                return this.quantity * this.calcDDS()
+            }
+        }
+        const pen = new Product("Pen",3.2,10)
+
+        document.getElementById("demo").innerHTML = pen.name + " - " + pen.quantity + " x " + pen.calcDDS() + " = " + pen.total() + " лв"
+    </script>
+</body>
+</html>

@@ -17,7 +17,7 @@ class PagesDetailView(DetailView):
 class PagesCreateView(CreateView):
     model = Pages
     template_name = 'post_new.html'
-    fields = ['title','author','body']
+    fields = ['title','author','body','image']
 
 class PagesUpdateView(UpdateView):
     model = Pages

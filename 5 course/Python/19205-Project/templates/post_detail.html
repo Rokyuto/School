@@ -1,7 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 <div class="post-entry">
     <h2>{{ pages.title }}</h2>
+    {% if pages.image %}
+    <img src="{{pages.image.url}}" alt="Image" class="image-thumbnail" style="max-height: 200px;">
+    {% else %}
+    <img src="{% static 'images/image.jpg' %}" alt="Image" class="image-thumbnail" style="max-height: 200px;">
+    {% endif %}
     <p>{{ pages.body }}</p>
 </div>
 

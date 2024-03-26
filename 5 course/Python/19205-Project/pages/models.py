@@ -9,10 +9,12 @@ class Pages(models.Model):
         on_delete = models.CASCADE,
     )
     body = models.TextField()
-
+    image = models.ImageField(null=True, blank=True, upload_to='images/')
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
         return reverse('post_detail', args=[str(self.id)])
+
+
     
