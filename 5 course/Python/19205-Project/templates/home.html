@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/grid.css' %}">
+</head>
+<div class="pages-grid">
+    {% for pages in pages_list %}
+        <div class="pages-entry">
+            <h2><a href="{% url 'post_detail' pages.pk %}">{{pages.title}}</a></h2>
+            {% if pages.category %}
+                <h6>{{ pages.category }}</h6>
+            {% endif %}
+            {% if pages.image %}
+            <img src="{{pages.image.url}}" alt="Image" class="image-thumbnail" >
+            {% endif %}
+            <p>{{pages.body}}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock content %}
